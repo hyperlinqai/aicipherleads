@@ -1,4 +1,4 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import { Poppins } from "next/font/google";
 
 import { Header } from "@/components/layout/header";
 import BenefitsSection from "@/components/sections/benefit";
@@ -12,21 +12,15 @@ import SocialProofSection from "@/components/sections/socialProof";
 import SolutionsSection from "@/components/sections/solution";
 import TestComponent from "@/components/sections/test";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const poppins = Poppins({
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-poppins",
   subsets: ["latin"],
 });
 
 export default function Home() {
   return (
-    <div
-      className={`${geistSans.variable} ${geistMono.variable} grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]`}
-    >
+    <div className={`${poppins.variable} `}>
       <main className="min-h-screen bg-neutral-900">
         <Header />
         <Hero />
