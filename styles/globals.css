@@ -18,6 +18,8 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+  scroll-behavior: smooth;
+
 }
 
 @layer base {
@@ -85,14 +87,11 @@ body {
   }
 }
 
-@layer utilities {
-  .animate-stars {
-    @apply bg-[radial-gradient(2px_2px_at_20px_30px,#ffffff,rgba(0,0,0,0)),radial-gradient(2px_2px_at_40px_70px,#ffffff,rgba(0,0,0,0)),radial-gradient(2px_2px_at_50px_160px,#ffffff,rgba(0,0,0,0)),radial-gradient(2px_2px_at_90px_40px,#ffffff,rgba(0,0,0,0)),radial-gradient(2px_2px_at_130px_80px,#ffffff,rgba(0,0,0,0))];
-    animation: stars 4s linear infinite;
-  }
-
-  @keyframes stars {
-    0% { transform: translateY(0); }
-    100% { transform: translateY(-200px); }
-  }
+/* Hide scrollbar for carousel */
+.testimonial-track {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.testimonial-track::-webkit-scrollbar {
+  display: none;
 }
