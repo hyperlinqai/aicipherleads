@@ -75,7 +75,7 @@ export function Hero() {
           </div>
 
           <motion.div
-            className="absolute -bottom-5 left-1/2 transform -translate-x-1/2 bg-neutral-800 px-4 sm:px-8 py-3 sm:py-4 rounded-full shadow-xl w-[90%] sm:w-auto"
+            className="absolute -bottom-5 left-1/2 !transform -translate-x-1/2 bg-neutral-800 px-4 sm:px-8 py-3 sm:py-4 rounded-full shadow-xl  sm:w-auto"
             initial={{ y: 50, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.3, duration: 0.5 }}
@@ -85,7 +85,7 @@ export function Hero() {
                 <div className="text-lime-400 font-bold text-xl sm:text-2xl">
                   50+
                 </div>
-                <div className="text-white text-xs sm:text-sm">
+                <div className="text-white whitespace-pre text-xs sm:text-sm">
                   Happy Schools
                 </div>
               </div>
@@ -93,7 +93,7 @@ export function Hero() {
                 <div className="text-lime-400 font-bold text-xl sm:text-2xl">
                   90%
                 </div>
-                <div className="text-white text-xs sm:text-sm">
+                <div className="text-white text-xs whitespace-pre sm:text-sm">
                   Success Rate
                 </div>
               </div>
