@@ -1,6 +1,9 @@
 import { motion } from "framer-motion";
 import { Facebook, Instagram, Mail, Phone } from "lucide-react";
+import Image from "next/image";
 import { FC, useEffect } from "react";
+
+import Logo from "@/asset/cipher-leads-logo.svg";
 
 const Footer: FC = () => {
   // Smooth scroll handler
@@ -44,9 +47,7 @@ const Footer: FC = () => {
           {/* Company Info */}
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center mb-6">
-              <span className="text-3xl font-bold text-lime-400">
-                CIPHER LEADS
-              </span>
+              <Image src={Logo} alt="Ciper Leads" height={48} />
             </div>
             <p className="text-neutral-400 mb-6 max-w-md">
               Transforming preschool marketing with AI-driven strategies that
