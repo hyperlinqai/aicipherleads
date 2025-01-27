@@ -1,30 +1,16 @@
 import { motion } from "framer-motion";
 import React from "react";
 
-const SolutionsSection = () => {
-  const steps = [
-    {
-      title: "Audit",
-      icon: "M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2",
-      desc: "Comprehensive analysis of your current marketing strategy and digital presence.",
-    },
-    {
-      title: "Strategy",
-      icon: "M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z",
-      desc: "Custom marketing plan tailored to your preschool's unique needs.",
-    },
-    {
-      title: "Launch",
-      icon: "M13 10V3L4 14h7v7l9-11h-7z",
-      desc: "Implementation of AI-driven marketing campaigns and optimization.",
-    },
-    {
-      title: "Results",
-      icon: "M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z",
-      desc: "Measurable growth in admissions and parent engagement.",
-    },
-  ];
-
+export interface IProps {
+  title: string;
+  description: string;
+  steps: {
+    title: string;
+    icon: string;
+    desc: string;
+  }[];
+}
+const SolutionsSection = ({ title, description, steps }: IProps) => {
   return (
     <section id="solutions" className="py-20 bg-neutral-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -36,11 +22,10 @@ const SolutionsSection = () => {
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            How We Turn Challenges into Admissions
+            {title}
           </h2>
           <p className="text-neutral-400 text-lg max-w-2xl mx-auto">
-            Our proven 4-step process to transform your preschool&apos;s digital
-            presence
+            {description}
           </p>
         </motion.div>
 

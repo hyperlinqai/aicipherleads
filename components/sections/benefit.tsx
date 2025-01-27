@@ -1,29 +1,15 @@
 import { motion } from "framer-motion";
 
-const BenefitsSection = () => {
-  const benefits = [
-    {
-      title: "40% More Admissions",
-      icon: "M13 10V3L4 14h7v7l9-11h-7z",
-      desc: "Average increase in enrollment rates within the first 3 months",
-    },
-    {
-      title: "Parent-Friendly Campaigns",
-      icon: "M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z",
-      desc: "Targeted messaging that resonates with modern parents",
-    },
-    {
-      title: "Data-Driven Results",
-      icon: "M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z",
-      desc: "Real-time analytics and performance tracking",
-    },
-    {
-      title: "24/7 Support",
-      icon: "M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z",
-      desc: "Dedicated team for continuous assistance and optimization",
-    },
-  ];
-
+interface IProps {
+  title: string;
+  description: string;
+  benefits: {
+    title: string;
+    icon: string;
+    desc: string;
+  }[];
+}
+const BenefitsSection = ({ title, description, benefits }: IProps) => {
   return (
     <section id="benefits" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -35,10 +21,10 @@ const BenefitsSection = () => {
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-4xl font-bold text-neutral-900 mb-4">
-            Why Preschool Owners Choose Us
+            {title}
           </h2>
           <p className="text-neutral-600 text-lg max-w-2xl mx-auto">
-            Discover how we help preschools thrive in the digital age
+            {description}
           </p>
         </motion.div>
 

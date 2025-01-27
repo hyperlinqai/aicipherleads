@@ -1,5 +1,3 @@
-import { Poppins } from "next/font/google";
-
 import { Header } from "@/components/layout/header";
 import BenefitsSection from "@/components/sections/benefit";
 import CallToAction from "@/components/sections/callToAction";
@@ -12,15 +10,9 @@ import SocialProofSection from "@/components/sections/socialProof";
 import SolutionsSection from "@/components/sections/solution";
 import TestComponent from "@/components/sections/test";
 
-const poppins = Poppins({
-  weight: ["400", "500", "600", "700"],
-  variable: "--font-poppins",
-  subsets: ["latin"],
-});
-
 export default function Home() {
   return (
-    <div className={`${poppins.variable} `}>
+    <div>
       <main className="min-h-screen bg-neutral-900">
         <Header />
         <Hero />

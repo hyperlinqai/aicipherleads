@@ -1,13 +1,16 @@
 import { motion, useInView } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 
-const ResultsSection = () => {
-  const stats = [
-    { value: 200, label: "Leads in 30 Days" },
-    { value: 90, label: "Parent Engagement Rate" },
-    { value: 45, label: "Conversion Rate" },
-  ];
+interface IProps {
+  title: string;
+  description: string;
+  stats: {
+    value: number;
+    label: string;
+  }[];
+}
 
+const ResultsSection = ({ title, description, stats }: IProps) => {
   return (
     <section id="results" className="py-20 bg-neutral-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -19,10 +22,10 @@ const ResultsSection = () => {
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            See What We&apos;ve Achieved for Schools Like Yours
+            {title}
           </h2>
           <p className="text-neutral-400 text-lg max-w-2xl mx-auto">
-            Real results from our proven marketing strategies
+            {description}
           </p>
         </motion.div>
 

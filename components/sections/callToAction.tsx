@@ -1,8 +1,18 @@
 import { motion, useScroll, useTransform } from "framer-motion";
-import { CheckCircle, Clock, Heart } from "lucide-react";
-import { useEffect, useRef, useState } from "react";
+import { Clock } from "lucide-react";
+import React, { useEffect, useRef, useState } from "react";
 
-const CallToAction = () => {
+interface IProps {
+  title: string;
+  description: string;
+  trustItems: {
+    value: string;
+    label: string;
+    icon: React.ReactNode;
+  }[];
+}
+
+const CallToAction = ({ title, description, trustItems }: IProps) => {
   const [isMobileCTAVisible, setIsMobileCTAVisible] = useState(false);
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
@@ -10,24 +20,6 @@ const CallToAction = () => {
     offset: ["start end", "end start"],
   });
   const y = useTransform(scrollYProgress, [0, 1], ["-10%", "10%"]);
-
-  const trustItems = [
-    {
-      value: "24/7",
-      label: "Support",
-      icon: <Clock className="w-6 h-6" />,
-    },
-    {
-      value: "100%",
-      label: "Satisfaction",
-      icon: <Heart className="w-6 h-6" />,
-    },
-    {
-      value: "30 Days",
-      label: "Results",
-      icon: <CheckCircle className="w-6 h-6" />,
-    },
-  ];
 
   // Floating particles array
   const particles = Array(30).fill(0);
@@ -91,7 +83,7 @@ const CallToAction = () => {
             viewport={{ once: true }}
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
-              Transform Your Preschool&apos;s Future Today
+              {title}
             </h2>
 
             <motion.p
@@ -100,8 +92,7 @@ const CallToAction = () => {
               whileInView={{ opacity: 1 }}
               transition={{ delay: 0.3 }}
             >
-              Join 200+ schools who&apos;ve doubled admissions with our proven
-              system
+              {description}
             </motion.p>
           </motion.div>
 

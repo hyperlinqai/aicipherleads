@@ -1,31 +1,18 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useState } from "react";
 
-const testimonials = [
-  {
-    id: 1,
-    school: "Little Stars Preschool",
-    location: "San Francisco, CA",
-    quote:
-      "Our enrollment increased by 45% within just two months of working with Cipher Leads. Their understanding of the preschool market is outstanding.",
-  },
-  {
-    id: 2,
-    school: "Sunshine Learners",
-    location: "Chicago, IL",
-    quote:
-      "The AI-driven approach to marketing has transformed how we connect with parents. Our waiting list is now longer than ever!",
-  },
-  {
-    id: 3,
-    school: "Kids First Academy",
-    location: "Austin, TX",
-    quote:
-      "The ROI we've seen from Cipher Leads' marketing strategies has been incredible. They truly understand what parents are looking for.",
-  },
-];
+interface IProps {
+  title: string;
+  description: string;
+  testimonials: {
+    id: number;
+    school: string;
+    location: string;
+    quote: string;
+  }[];
+}
 
-const SocialProofSection = () => {
+const SocialProofSection = ({ title, description, testimonials }: IProps) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [direction, setDirection] = useState(1);
   const [isAnimating, setIsAnimating] = useState(false);
@@ -85,10 +72,10 @@ const SocialProofSection = () => {
           className="text-center mb-12 sm:mb-20"
         >
           <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl lg:text-5xl">
-            Trusted by 50+ Preschools Nationwide
+            {title}
           </h2>
           <p className="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
-            See what other preschool owners are saying about our services
+            {description}
           </p>
         </motion.div>
 

@@ -1,44 +1,19 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
 
-const ServicesSection = () => {
-  const [activeIndex, setActiveIndex] = useState<number | null>(null);
+interface IProps {
+  title: string;
+  description: string;
+  services: {
+    title: string;
+    icon: string;
+    desc: string;
+    features: string[];
+  }[];
+}
 
-  const services = [
-    {
-      title: "Social Media Ads",
-      icon: "M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z",
-      desc: "Targeted campaigns that reach parents in your area",
-      features: [
-        "Facebook & Instagram Ads",
-        "Custom Audience Targeting",
-        "Performance Analytics",
-        "A/B Testing",
-      ],
-    },
-    {
-      title: "Parent SEO",
-      icon: "M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9",
-      desc: "Dominate local search results for preschool queries",
-      features: [
-        "Local SEO Optimization",
-        "Keyword Research",
-        "Content Strategy",
-        "Google My Business",
-      ],
-    },
-    {
-      title: "Website Design",
-      icon: "M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z",
-      desc: "Beautiful, conversion-focused preschool websites",
-      features: [
-        "Mobile Responsive",
-        "Virtual Tours",
-        "Online Registration",
-        "Parent Portal",
-      ],
-    },
-  ];
+const ServicesSection = ({ title, description, services }: IProps) => {
+  const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
   return (
     <section
@@ -53,10 +28,10 @@ const ServicesSection = () => {
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            Our Play School Marketing Expertise
+            {title}
           </h2>
           <p className="text-neutral-400 text-lg max-w-2xl mx-auto">
-            Comprehensive digital solutions designed specifically for preschools
+            {description}
           </p>
         </motion.div>
 

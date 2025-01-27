@@ -3,7 +3,25 @@ import { ArrowRight } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 
-export function Hero() {
+interface IProps {
+  title: {
+    main: string;
+    span: string;
+  };
+  description: string;
+  cta: {
+    primary: string;
+    primaryClick: () => void;
+    secondary: string;
+    secondaryClick: () => void;
+  };
+  rightContainer: {
+    title: string;
+    description: string;
+  }[];
+}
+
+export function Hero({ title, description, cta, rightContainer }: IProps) {
   return (
     <section
       id="home"
@@ -20,20 +38,19 @@ export function Hero() {
           transition={{ duration: 0.5 }}
         >
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 sm:mb-6 leading-tight">
-            Grow Your Play School Admissions{" "}
+            {title.main}{" "}
             <motion.span
               className="text-lime-400 block sm:inline"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3 }}
             >
-              with AI-Driven Marketing.
+              {title.span}
             </motion.span>
           </h1>
 
           <p className="text-base sm:text-lg md:text-xl text-neutral-300 mb-6 sm:mb-8 leading-relaxed px-4 sm:px-0">
-            Boost enrollments, build parent trust, and outshine competitors
-            using proven strategies tailored for preschools.
+            {description}
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start px-4 sm:px-0">
@@ -47,7 +64,7 @@ export function Hero() {
                 className="w-full sm:w-auto bg-lime-400 text-neutral-900 hover:bg-lime-500 text-base sm:text-lg py-6 sm:py-5 px-8 group"
               >
                 <span className="relative z-10 flex items-center gap-2">
-                  Get Free Consultation
+                  {cta.primary}
                   <ArrowRight className="h-5 w-5 transition-all group-hover:translate-x-1" />
                 </span>
                 {/* Animated background */}
@@ -65,7 +82,7 @@ export function Hero() {
                 size="lg"
                 className="w-full sm:w-auto border-lime-400 text-lime-400 hover:bg-lime-400/10 hover:text-lime-300 text-base sm:text-lg py-6 sm:py-5 px-8"
               >
-                Explore Solutions
+                {cta.secondary}
               </Button>
             </motion.div>
           </div>
@@ -255,19 +272,19 @@ export function Hero() {
               <div className="flex gap-6">
                 <div className="text-center">
                   <div className="text-lime-400 font-bold text-2xl md:text-3xl">
-                    50+
+                    {rightContainer[0].title}
                   </div>
                   <div className="text-white text-xs uppercase tracking-wide mt-1">
-                    Happy Schools
+                    {rightContainer[0].description}
                   </div>
                 </div>
                 <div className="h-auto w-px bg-lime-400/20" />
                 <div className="text-center">
                   <div className="text-lime-400 font-bold text-2xl md:text-3xl">
-                    90%
+                    {rightContainer[1].title}
                   </div>
                   <div className="text-white text-xs uppercase tracking-wide mt-1 ">
-                    Success Rate
+                    {rightContainer[1].description}
                   </div>
                 </div>
               </div>

@@ -1,28 +1,17 @@
 import { motion } from "framer-motion";
-import { Building2, MapPin, Monitor } from "lucide-react";
+import { ReactNode } from "react";
 
-const problems = [
-  {
-    icon: <MapPin className="w-full h-full" />,
-    title: "Low Online Visibility",
-    description:
-      "Parents can't find your preschool online when searching for options in your area.",
-  },
-  {
-    icon: <Building2 className="w-full h-full" />,
-    title: "High Local Competition",
-    description:
-      "Standing out among numerous preschools in your neighborhood is becoming harder.",
-  },
-  {
-    icon: <Monitor className="w-full h-full" />,
-    title: "Outdated Marketing",
-    description:
-      "Traditional marketing methods aren't reaching today's tech-savvy parents effectively.",
-  },
-];
+interface IProps {
+  title: string;
+  description: string;
+  problems: {
+    icon: ReactNode;
+    title: string;
+    description: string;
+  }[];
+}
 
-export function ProblemStatement() {
+export function ProblemStatement({ title, description, problems }: IProps) {
   return (
     <section id="problems" className="py-12 sm:py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -34,11 +23,10 @@ export function ProblemStatement() {
           transition={{ duration: 0.5 }}
         >
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-neutral-900 mb-3 sm:mb-4 px-4">
-            Are You Struggling to Attract More Admissions?
+            {title}
           </h2>
           <p className="text-base sm:text-lg text-neutral-600 max-w-2xl mx-auto px-4">
-            Common challenges faced by preschool owners in today&apos;s
-            competitive market
+            {description}
           </p>
         </motion.div>
 
