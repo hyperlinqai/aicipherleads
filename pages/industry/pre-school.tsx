@@ -7,16 +7,16 @@ import {
   Monitor,
 } from "lucide-react";
 
+import BenefitsSection from "@/components/industry/sections/benefit";
+import CallToAction from "@/components/industry/sections/callToAction";
+import Footer from "@/components/industry/sections/footer";
+import { Hero } from "@/components/industry/sections/hero";
+import { ProblemStatement } from "@/components/industry/sections/problem-statement";
+import ResultsSection from "@/components/industry/sections/result";
+import ServicesSection from "@/components/industry/sections/services";
+import SocialProofSection from "@/components/industry/sections/socialProof";
+import SolutionsSection from "@/components/industry/sections/solution";
 import { Header } from "@/components/layout/header";
-import BenefitsSection from "@/components/sections/benefit";
-import CallToAction from "@/components/sections/callToAction";
-import Footer from "@/components/sections/footer";
-import { Hero } from "@/components/sections/hero";
-import { ProblemStatement } from "@/components/sections/problem-statement";
-import ResultsSection from "@/components/sections/result";
-import ServicesSection from "@/components/sections/services";
-import SocialProofSection from "@/components/sections/socialProof";
-import SolutionsSection from "@/components/sections/solution";
 
 // -----------------Hero section Data Start-----------------
 const HeroSectionData = {
