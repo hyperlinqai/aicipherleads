@@ -1,5 +1,5 @@
-import { motion } from "framer-motion";
-import { useEffect, useRef, useState } from "react";
+import { animate, motion, useMotionValue, useTransform } from "framer-motion";
+import { useEffect, useRef } from "react";
 
 const clients = [
   { name: "zuri", logo: "/logos/zuri.svg" },
@@ -8,19 +8,31 @@ const clients = [
   { name: "Codeyoung", logo: "/logos/codeyoung.svg" },
   { name: "inducti", logo: "/logos/inducti.svg" },
   { name: "InternsUP", logo: "/logos/internsup.svg" },
+  { name: "WinWind", logo: "/logos/winwind.svg" },
+  { name: "VAMTEC", logo: "/logos/vamtec.svg" },
+  { name: "rianpro", logo: "/logos/rianpro.svg" },
+  { name: "OBERNTICK", logo: "/logos/oberntick.svg" },
 ];
 
 const ClientCarousel = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
   const carouselRef = useRef<HTMLDivElement>(null);
+  const x = useMotionValue(0);
   const duplicatedClients = [...clients, ...clients];
+  const logoWidth = 240;
+  const gap = 32;
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentIndex((prev) => (prev + 1) % clients.length);
-    }, 3000);
+    const currentX = x.get();
+    const finalPosition = -(logoWidth + gap) * clients.length;
 
-    return () => clearInterval(interval);
+    const controls = animate(x, [currentX, finalPosition], {
+      ease: "linear",
+      duration: 30,
+      repeat: Infinity,
+      repeatType: "loop",
+    });
+
+    return controls.stop;
   }, []);
 
   return (
@@ -45,41 +57,31 @@ const ClientCarousel = () => {
           <div className="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-neutral-900 to-transparent z-10" />
           <div className="absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-neutral-900 to-transparent z-10" />
 
-          <motion.div
-            ref={carouselRef}
-            className="flex gap-8"
-            animate={{
-              x: -currentIndex * (240 + 32), // logo width + gap
-            }}
-            transition={{ type: "tween", duration: 1 }}
-          >
+          <motion.div ref={carouselRef} className="flex gap-8" style={{ x }}>
             {duplicatedClients.map((client, index) => (
               <motion.div
                 key={`${client.name}-${index}`}
                 className="w-60 h-32 flex items-center justify-center p-6 rounded-2xl bg-neutral-800/50 backdrop-blur-sm border border-neutral-700 hover:border-lime-400/30 transition-all"
-                whileHover={{ scale: 1.05 }}
+                whileHover={{
+                  scale: 1.05,
+                  transition: { type: "spring", stiffness: 300 },
+                }}
+                whileTap={{ scale: 0.95 }}
               >
-                <img
+                <motion.img
                   src={client.logo}
                   alt={client.name}
                   className="max-h-12 w-auto object-contain grayscale hover:grayscale-0 transition-all"
+                  initial={{ opacity: 0.8, scale: 0.9 }}
+                  whileInView={{
+                    opacity: 1,
+                    scale: 1,
+                    transition: { duration: 0.5, ease: "easeInOut" },
+                  }}
                 />
               </motion.div>
             ))}
           </motion.div>
-        </div>
-
-        {/* Navigation Dots */}
-        <div className="flex justify-center gap-2 mt-8">
-          {clients.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => setCurrentIndex(index)}
-              className={`w-3 h-3 rounded-full transition-all ${
-                index === currentIndex ? "bg-lime-400" : "bg-neutral-700"
-              }`}
-            />
-          ))}
         </div>
       </div>
     </section>

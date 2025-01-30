@@ -3,7 +3,7 @@ import { CheckCircle, Clock, Heart } from "lucide-react";
 import CallToAction from "@/components/industry/sections/callToAction";
 import Footer from "@/components/industry/sections/footer";
 import { Header } from "@/components/layout/header";
-// import ClientVisibility from "@/components/master/section/clientVisibilty";
+import ClientVisibility from "@/components/master/section/clientVisibilty";
 import GrowthSection from "@/components/master/section/growthBarrier";
 import HeroSection from "@/components/master/section/hero";
 import ProcessSection from "@/components/master/section/process";
@@ -41,7 +41,7 @@ export default function Home() {
       <main className="min-h-screen bg-neutral-900">
         <Header />
         <HeroSection />
-        {/* <ClientVisibility /> */}
+        <ClientVisibility />
         <GrowthSection />
         <ServicesSection />
         <ProcessSection />
