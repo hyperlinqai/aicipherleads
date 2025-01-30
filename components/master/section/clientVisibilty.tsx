@@ -1,4 +1,4 @@
-import { animate, motion, useMotionValue, useTransform } from "framer-motion";
+import { animate, motion, useMotionValue } from "framer-motion";
 import { useEffect, useRef } from "react";
 
 const clients = [
