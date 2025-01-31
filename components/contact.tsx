@@ -1,5 +1,6 @@
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import {
+  CheckCircle,
   Github,
   Linkedin,
   Mail,
@@ -8,10 +9,49 @@ import {
   Send,
   Twitter,
 } from "lucide-react";
+import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 
+import emailjs from "@emailjs/browser";
+
 const ContactPage = () => {
-  const { register, handleSubmit } = useForm();
+  const { register, handleSubmit, reset } = useForm<FormData>();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSuccess, setIsSuccess] = useState(false);
+  const [error, setError] = useState("");
+
+  // Initialize EmailJS with your Public Key
+  useEffect(() => {
+    emailjs.init(process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!);
+  }, []);
+
+  interface FormData extends Record<string, unknown> {
+    name: string;
+    email: string;
+    message: string;
+  }
+
+  const onSubmit = async (data: FormData) => {
+    try {
+      setIsSubmitting(true);
+      setError("");
+
+      await emailjs.send(
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
+        data
+      );
+
+      reset();
+      setIsSuccess(true);
+      setTimeout(() => setIsSuccess(false), 5000);
+    } catch (err) {
+      console.log(err);
+      setError("Failed to send message. Please try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -27,11 +67,6 @@ const ContactPage = () => {
   const itemVariants = {
     hidden: { y: 30, opacity: 0 },
     visible: { y: 0, opacity: 1 },
-  };
-
-  const onSubmit = (data: unknown) => {
-    console.log(data);
-    // Handle form submission
   };
 
   return (
@@ -83,6 +118,33 @@ const ContactPage = () => {
           </motion.p>
         </motion.div>
 
+        <AnimatePresence>
+          {isSuccess && (
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: 20 }}
+              className="fixed top-8 left-1/2 -translate-x-1/2 z-50"
+            >
+              <div className="bg-lime-400/90 text-neutral-900 px-8 py-4 rounded-xl flex items-center gap-3 backdrop-blur-sm">
+                <CheckCircle className="w-6 h-6" />
+                <span>Message sent successfully!</span>
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
+
+        {/* Error Message */}
+        {error && (
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="fixed top-8 left-1/2 -translate-x-1/2 z-50 bg-red-400/90 text-white px-8 py-4 rounded-xl flex items-center gap-3 backdrop-blur-sm"
+          >
+            <span>{error}</span>
+          </motion.div>
+        )}
+
         <div className="grid md:grid-cols-2 gap-12">
           {/* Contact Form */}
           <motion.form
@@ -124,13 +186,25 @@ const ContactPage = () => {
               </div>
             </motion.div>
 
+            {/* Modified Form Button */}
             <motion.div variants={itemVariants}>
               <button
                 type="submit"
-                className="w-full bg-lime-400 text-neutral-900 py-4 px-8 rounded-xl font-semibold hover:bg-lime-500 transition-all flex items-center justify-center gap-3"
+                disabled={isSubmitting}
+                className="w-full bg-lime-400 text-neutral-900 py-4 px-8 rounded-xl font-semibold hover:bg-lime-500 transition-all flex items-center justify-center gap-3 disabled:opacity-70 disabled:cursor-not-allowed"
               >
-                <Send className="w-5 h-5" />
-                Send Message
+                {isSubmitting ? (
+                  <motion.div
+                    animate={{ rotate: 360 }}
+                    transition={{ repeat: Infinity, duration: 1 }}
+                    className="w-6 h-6 border-2 border-lime-900 border-t-transparent rounded-full"
+                  />
+                ) : (
+                  <>
+                    <Send className="w-5 h-5" />
+                    Send Message
+                  </>
+                )}
               </button>
             </motion.div>
           </motion.form>
