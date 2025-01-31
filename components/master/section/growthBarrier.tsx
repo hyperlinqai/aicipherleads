@@ -1,23 +1,31 @@
 import { motion } from "framer-motion";
+import {
+  Activity,
+  BarChart3,
+  Binoculars,
+  Rocket,
+  ShoppingCart,
+  Users,
+} from "lucide-react";
 
 const challenges = [
   {
     title: "Low Online Visibility",
     description:
       "Struggling to stand out in the digital landscape and reach target audiences",
-    icon: "👁️",
+    icon: <Binoculars size={24} />,
   },
   {
     title: "Unpredictable Growth",
     description:
       "Experiencing inconsistent business growth due to market fluctuations",
-    icon: "📈",
+    icon: <Activity size={24} />,
   },
   {
     title: "Poor Conversion Rates",
     description:
       "Website traffic isn't translating into meaningful leads or sales",
-    icon: "🔄",
+    icon: <ShoppingCart size={24} />,
   },
 ];
 
@@ -25,18 +33,18 @@ const solutions = [
   {
     title: "Data-Driven Strategies",
     description: "Tailored solutions aligned with your specific business goals",
-    icon: "📊",
+    icon: <BarChart3 size={24} />,
   },
   {
     title: "Rapid Implementation",
     description:
       "Quick deployment of solutions to maintain competitive advantage",
-    icon: "🚀",
+    icon: <Rocket size={24} />,
   },
   {
     title: "Expert Team",
     description: "Dedicated professionals with proven digital growth expertise",
-    icon: "👩💻",
+    icon: <Users size={24} />,
   },
 ];
 

@@ -1,10 +1,10 @@
 import { motion } from "framer-motion";
-import { CheckCircle } from "lucide-react";
+import { Bot, CheckCircle, Grid, Laptop, Target } from "lucide-react";
 
 const services = [
   {
     title: "Advanced Lead Generation",
-    icon: "🎯",
+    icon: <Target size={32} />,
     description:
       "Data-driven strategies to capture and convert high-quality leads",
     features: [
@@ -16,7 +16,7 @@ const services = [
   },
   {
     title: "AI-Powered SEO",
-    icon: "🤖",
+    icon: <Bot size={32} />,
     description:
       "Leverage cutting-edge AI technology to optimize search rankings",
     features: [
@@ -28,7 +28,7 @@ const services = [
   },
   {
     title: "Social Media Management",
-    icon: "📱",
+    icon: <Grid size={32} />,
     description: "Strategic social media presence to build brand awareness",
     features: [
       "Content strategy",
@@ -39,7 +39,7 @@ const services = [
   },
   {
     title: "Web Design & Development",
-    icon: "💻",
+    icon: <Laptop size={32} />,
     description: "Conversion-focused design and development solutions",
     features: [
       "Custom design",
