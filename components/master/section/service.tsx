@@ -4,7 +4,7 @@ import { Bot, CheckCircle, Grid, Laptop, Target } from "lucide-react";
 const services = [
   {
     title: "Advanced Lead Generation",
-    icon: <Target size={32} />,
+    icon: <Target size={32} color="#A3E635" />,
     description:
       "Data-driven strategies to capture and convert high-quality leads",
     features: [
@@ -16,7 +16,7 @@ const services = [
   },
   {
     title: "AI-Powered SEO",
-    icon: <Bot size={32} />,
+    icon: <Bot size={32} color="#A3E635" />,
     description:
       "Leverage cutting-edge AI technology to optimize search rankings",
     features: [
@@ -28,7 +28,7 @@ const services = [
   },
   {
     title: "Social Media Management",
-    icon: <Grid size={32} />,
+    icon: <Grid size={32} color="#A3E635" />,
     description: "Strategic social media presence to build brand awareness",
     features: [
       "Content strategy",
@@ -39,7 +39,7 @@ const services = [
   },
   {
     title: "Web Design & Development",
-    icon: <Laptop size={32} />,
+    icon: <Laptop size={32} color="#A3E635" />,
     description: "Conversion-focused design and development solutions",
     features: [
       "Custom design",
