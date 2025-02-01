@@ -269,6 +269,7 @@ export default function PreSchool() {
       <main className="min-h-screen bg-neutral-900">
         <Header />
         <Hero {...HeroSectionData} />
+
         <ProblemStatement {...problemStatementData} />
         <SolutionsSection {...SolutionsSectionData} />
         <BenefitsSection {...BenefitSectionData} />

@@ -1,5 +1,13 @@
 import { motion } from "framer-motion";
-import { Bot, CheckCircle, Grid, Laptop, Target } from "lucide-react";
+import {
+  Bot,
+  CheckCircle,
+  Grid,
+  Laptop,
+  ShieldCheck,
+  Target,
+  TrendingUp,
+} from "lucide-react";
 
 const services = [
   {
@@ -46,6 +54,28 @@ const services = [
       "Mobile-first approach",
       "UX optimization",
       "Performance tuning",
+    ],
+  },
+  {
+    title: "Funnel Marketing",
+    icon: <TrendingUp size={32} color="#A3E635" />,
+    description: "Optimized sales funnels to maximize conversion rates",
+    features: [
+      "Funnel analysis & optimization",
+      "A/B testing",
+      "Lead nurturing",
+      "Conversion tracking",
+    ],
+  },
+  {
+    title: "Online Reputation Management",
+    icon: <ShieldCheck size={32} color="#A3E635" />,
+    description: "Protect and enhance your brand's online presence",
+    features: [
+      "Review monitoring",
+      "Sentiment analysis",
+      "Crisis management",
+      "Brand reputation reports",
     ],
   },
 ];
@@ -117,7 +147,7 @@ const ServicesSection = () => {
 
         {/* Services Grid */}
         <motion.div
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 mb-20"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
@@ -126,35 +156,48 @@ const ServicesSection = () => {
           {services.map((service, index) => (
             <motion.div
               key={service.title}
-              className="p-8 rounded-2xl bg-neutral-800/50 backdrop-blur-sm border border-neutral-700 hover:border-lime-400/30 transition-all group"
+              className="p-8 rounded-3xl bg-gradient-to-br from-neutral-800/70 to-neutral-900/70 backdrop-blur-lg border border-neutral-700 shadow-lg hover:border-lime-400/50 transition-all duration-300 group"
               variants={itemVariants}
               whileHover={{ y: -5 }}
               transition={{ delay: index * 0.1 }}
             >
               <div className="flex items-start gap-6">
+                {/* Icon */}
                 <motion.span
-                  className="text-4xl mt-2"
-                  whileHover={{ rotate: 15, scale: 1.1 }}
+                  className="text-5xl mt-2 text-lime-400 drop-shadow-md"
+                  whileHover={{ rotate: 10, scale: 1.2 }}
+                  transition={{ type: "spring", stiffness: 300 }}
                 >
                   {service.icon}
                 </motion.span>
+
+                {/* Content */}
                 <div className="flex-1">
-                  <h3 className="text-xl font-semibold text-white mb-3">
+                  {/* Title */}
+                  <h3 className="text-2xl font-bold text-white mb-4 leading-tight">
                     {service.title}
                   </h3>
-                  <p className="text-gray-300 mb-4">{service.description}</p>
+
+                  {/* Description */}
+                  <p className="text-gray-300 mb-6 text-base leading-relaxed">
+                    {service.description}
+                  </p>
+
+                  {/* Features List */}
                   <ul className="space-y-3 mb-6">
                     {service.features.map((feature) => (
-                      <li key={feature} className="flex items-center gap-2">
+                      <li key={feature} className="flex items-center gap-2 ">
                         <CheckCircle className="h-5 w-5 text-lime-400" />
-                        <span className="text-gray-300">{feature}</span>
+                        <span className="text-gray-300 text-sm">{feature}</span>
                       </li>
                     ))}
                   </ul>
-                  {/* <button className="flex items-center gap-2 text-lime-400 hover:text-lime-300 transition-colors">
-                    Learn More
-                    <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-                  </button> */}
+
+                  {/* Learn More Button */}
+                  {/* <button className="flex items-center gap-2 text-lime-400 font-medium text-sm hover:text-lime-300 transition-colors duration-200 group-hover:translate-x-1">
+                  Learn More
+                  <ArrowRight className="h-4 w-4 transition-transform duration-200" />
+                </button> */}
                 </div>
               </div>
             </motion.div>
