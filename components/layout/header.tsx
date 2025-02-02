@@ -1,112 +1,281 @@
-import { AnimatePresence, motion } from "framer-motion";
+// import { AnimatePresence, motion } from "framer-motion";
+// import { ChevronDown, Menu, X } from "lucide-react";
+// import Image from "next/image";
+// import Link from "next/link";
+// import { useState } from "react";
+
+// import Logo from "@/asset/cipher-leads-logo.svg";
+// import { Button } from "@/components/ui/button";
+
+// export function Header() {
+//   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+//   const [isIndustryOpen, setIsIndustryOpen] = useState(false);
+//   const [isMobileIndustryOpen, setIsMobileIndustryOpen] = useState(false);
+
+//   const navLinks = [
+//     { id: 1, name: "Home", href: "/" },
+//     {
+//       id: 2,
+//       name: "Services",
+//       href: "#",
+//       submenu: [
+//         { name: "Advanced Lead Generation", href: "#" },
+//         { name: "AI-Powered SEO", href: "#" },
+//         { name: "Social Media Management", href: "#" },
+//         { name: "Web Design & Development", href: "#" },
+//         { name: "Funnel Marketing", href: "#" },
+//         { name: "Online Reputation Management", href: "#" },
+//       ],
+//     },
+//     {
+//       id: 3,
+//       name: "Industry",
+//       href: "#",
+//       submenu: [
+//         { name: "Pre-school", href: "/industry/pre-school" },
+//         { name: "Professional", href: "#" },
+//         { name: "Retail", href: "#" },
+//       ],
+//     },
+//     { id: 4, name: "Contact", href: "/contact" },
+//   ];
+
+//   const mobileMenuVariants = {
+//     open: { opacity: 1, y: 0 },
+//     closed: { opacity: 0, y: -20 },
+//   };
+
+//   const dropdownVariants = {
+//     open: {
+//       opacity: 1,
+//       y: 0,
+//       transition: { type: "spring", stiffness: 300, damping: 24 },
+//     },
+//     closed: {
+//       opacity: 0,
+//       y: -20,
+//       transition: { duration: 0.2 },
+//     },
+//   };
+
+//   return (
+//     <motion.nav
+//       initial={{ y: -100 }}
+//       animate={{ y: 0 }}
+//       transition={{ duration: 0.5 }}
+//       className="fixed w-full z-50 bg-neutral-900/95 backdrop-blur-sm border-b border-neutral-800"
+//     >
+//       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+//         <div className="flex items-center justify-between h-20">
+//           {/* Logo */}
+//           <motion.div whileHover={{ scale: 1.05 }}>
+//             <Link href="/" className="h-11">
+//               <Image src={Logo} alt="Ciper Leads" height={44} />
+//             </Link>
+//           </motion.div>
+
+//           {/* Desktop Navigation */}
+//           <div className="hidden md:flex items-center gap-8">
+//             {navLinks.map((link) => (
+//               <div
+//                 key={link.id}
+//                 className="relative"
+//                 onMouseEnter={() => link.submenu && setIsIndustryOpen(true)}
+//                 onMouseLeave={() => link.submenu && setIsIndustryOpen(false)}
+//               >
+//                 <Link
+//                   href={link.href}
+//                   className="flex items-center gap-1 text-neutral-300 hover:text-lime-400 transition-colors text-sm font-medium"
+//                 >
+//                   {link.name}
+//                   {link.submenu && <ChevronDown className="h-4 w-4" />}
+//                 </Link>
+
+//                 {link.submenu && (
+//                   <AnimatePresence>
+//                     {isIndustryOpen && (
+//                       <motion.div
+//                         variants={dropdownVariants}
+//                         initial="closed"
+//                         animate="open"
+//                         exit="closed"
+//                         className="absolute top-full left-0 mt-2 w-48 bg-neutral-800/95 backdrop-blur-sm rounded-xl p-2 border border-neutral-700"
+//                       >
+//                         {link.submenu.map((subItem) => (
+//                           <Link
+//                             key={subItem.name}
+//                             href={subItem.href}
+//                             className="block px-4 py-2.5 text-sm text-neutral-300 hover:bg-neutral-700/30 rounded-lg transition-colors"
+//                           >
+//                             {subItem.name}
+//                           </Link>
+//                         ))}
+//                       </motion.div>
+//                     )}
+//                   </AnimatePresence>
+//                 )}
+//               </div>
+//             ))}
+
+//             <Button className="bg-lime-400 hover:bg-lime-500 text-neutral-900">
+//               Free Consultation
+//             </Button>
+//           </div>
+
+//           {/* Mobile Menu Button */}
+//           <button
+//             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+//             className="md:hidden p-2 text-neutral-300 hover:text-lime-400"
+//           >
+//             {isMobileMenuOpen ? (
+//               <X className="h-6 w-6" />
+//             ) : (
+//               <Menu className="h-6 w-6" />
+//             )}
+//           </button>
+//         </div>
+
+//         {/* Mobile Navigation */}
+//         <AnimatePresence>
+//           {isMobileMenuOpen && (
+//             <motion.div
+//               initial="closed"
+//               animate="open"
+//               exit="closed"
+//               variants={mobileMenuVariants}
+//               className="md:hidden pb-4 space-y-4"
+//             >
+//               {navLinks.map((link) => (
+//                 <div key={link.id}>
+//                   <div className="flex items-center justify-between">
+//                     <Link
+//                       href={link.href}
+//                       className="block text-neutral-300 hover:text-lime-400 py-2 px-4 rounded-lg hover:bg-neutral-800 transition-colors w-full"
+//                       onClick={() => {
+//                         if (!link.submenu) setIsMobileMenuOpen(false);
+//                       }}
+//                     >
+//                       {link.name}
+//                     </Link>
+//                     {link.submenu && (
+//                       <button
+//                         onClick={() =>
+//                           setIsMobileIndustryOpen(!isMobileIndustryOpen)
+//                         }
+//                         className="p-2 text-neutral-300 hover:text-lime-400"
+//                       >
+//                         <ChevronDown
+//                           className={`h-5 w-5 transition-transform ${
+//                             isMobileIndustryOpen ? "rotate-180" : ""
+//                           }`}
+//                         />
+//                       </button>
+//                     )}
+//                   </div>
+
+//                   {link.submenu && isMobileIndustryOpen && (
+//                     <div className="ml-6 space-y-2">
+//                       {link.submenu.map((subItem) => (
+//                         <Link
+//                           key={subItem.name}
+//                           href={subItem.href}
+//                           className="block px-4 py-2 text-sm text-neutral-300 hover:bg-neutral-700/30 rounded-lg transition-colors"
+//                           onClick={() => setIsMobileMenuOpen(false)}
+//                         >
+//                           {subItem.name}
+//                         </Link>
+//                       ))}
+//                     </div>
+//                   )}
+//                 </div>
+//               ))}
+
+//               <Button className="w-full bg-lime-400 hover:bg-lime-500 text-neutral-900">
+//                 Free Consultation
+//               </Button>
+//             </motion.div>
+//           )}
+//         </AnimatePresence>
+//       </div>
+//     </motion.nav>
+//   );
+// }
+
 import { ChevronDown, Menu, X } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 
 import Logo from "@/asset/cipher-leads-logo.svg";
-import { Button } from "@/components/ui/button";
 
 export function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [isIndustryOpen, setIsIndustryOpen] = useState(false);
-  const [isMobileIndustryOpen, setIsMobileIndustryOpen] = useState(false);
 
   const navLinks = [
     { id: 1, name: "Home", href: "/" },
     {
       id: 2,
+      name: "Services",
+      href: "#",
+      submenu: [
+        { name: "Advanced Lead Generation", href: "#" },
+        { name: "AI-Powered SEO", href: "#" },
+        { name: "Social Media Management", href: "#" },
+        { name: "Web Design & Development", href: "#" },
+        { name: "Funnel Marketing", href: "#" },
+        { name: "Online Reputation Management", href: "#" },
+      ],
+    },
+    {
+      id: 3,
       name: "Industry",
       href: "#",
       submenu: [
         { name: "Pre-school", href: "/industry/pre-school" },
-        { name: "Entrepreneur", href: "#" },
-        { name: "Cell Phone Industry", href: "#" },
+        { name: "Professional", href: "#" },
+        { name: "Retail", href: "#" },
       ],
     },
-    { id: 3, name: "Contact", href: "/contact" },
+    { id: 4, name: "Contact", href: "/contact" },
   ];
 
-  const mobileMenuVariants = {
-    open: { opacity: 1, y: 0 },
-    closed: { opacity: 0, y: -20 },
-  };
-
-  const dropdownVariants = {
-    open: {
-      opacity: 1,
-      y: 0,
-      transition: { type: "spring", stiffness: 300, damping: 24 },
-    },
-    closed: {
-      opacity: 0,
-      y: -20,
-      transition: { duration: 0.2 },
-    },
-  };
-
   return (
-    <motion.nav
-      initial={{ y: -100 }}
-      animate={{ y: 0 }}
-      transition={{ duration: 0.5 }}
-      className="fixed w-full z-50 bg-neutral-900/95 backdrop-blur-sm border-b border-neutral-800"
-    >
+    <nav className="fixed w-full z-50 bg-neutral-900/95 backdrop-blur-sm border-b border-neutral-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <motion.div whileHover={{ scale: 1.05 }}>
-            <Link href="/" className="h-11">
-              <Image src={Logo} alt="Ciper Leads" height={44} />
-            </Link>
-          </motion.div>
+          <Link href="/" className="h-11">
+            <Image src={Logo} alt="Cipher Leads" height={44} width={150} />
+          </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
             {navLinks.map((link) => (
-              <div
-                key={link.id}
-                className="relative"
-                onMouseEnter={() => link.submenu && setIsIndustryOpen(true)}
-                onMouseLeave={() => link.submenu && setIsIndustryOpen(false)}
-              >
-                <Link
-                  href={link.href}
-                  className="flex items-center gap-1 text-neutral-300 hover:text-lime-400 transition-colors text-sm font-medium"
-                >
+              <div key={link.id} className="relative group">
+                <div className="flex items-center gap-1 text-neutral-300 hover:text-lime-400 transition-colors text-sm font-medium cursor-pointer">
                   {link.name}
-                  {link.submenu && <ChevronDown className="h-4 w-4" />}
-                </Link>
-
+                  {link.submenu && (
+                    <ChevronDown className="h-4 w-4 transition-transform group-hover:rotate-180" />
+                  )}
+                </div>
                 {link.submenu && (
-                  <AnimatePresence>
-                    {isIndustryOpen && (
-                      <motion.div
-                        variants={dropdownVariants}
-                        initial="closed"
-                        animate="open"
-                        exit="closed"
-                        className="absolute top-full left-0 mt-2 w-48 bg-neutral-800/95 backdrop-blur-sm rounded-xl p-2 border border-neutral-700"
+                  <div className="absolute top-full left-0 mt-2 w-60  bg-neutral-800/95 backdrop-blur-sm rounded-xl p-2 border border-neutral-700 shadow-lg z-10 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+                    {link.submenu.map((subItem) => (
+                      <Link
+                        key={subItem.name}
+                        href={subItem.href}
+                        className="block px-4 py-2.5 text-sm text-neutral-300 hover:bg-neutral-700/30 rounded-lg transition-colors"
                       >
-                        {link.submenu.map((subItem) => (
-                          <Link
-                            key={subItem.name}
-                            href={subItem.href}
-                            className="block px-4 py-2.5 text-sm text-neutral-300 hover:bg-neutral-700/30 rounded-lg transition-colors"
-                          >
-                            {subItem.name}
-                          </Link>
-                        ))}
-                      </motion.div>
-                    )}
-                  </AnimatePresence>
+                        {subItem.name}
+                      </Link>
+                    ))}
+                  </div>
                 )}
               </div>
             ))}
-
-            <Button className="bg-lime-400 hover:bg-lime-500 text-neutral-900">
+            <button className="bg-lime-400 hover:bg-lime-500 text-neutral-900 px-6 py-2 rounded-lg font-medium">
               Free Consultation
-            </Button>
+            </button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -123,67 +292,60 @@ export function Header() {
         </div>
 
         {/* Mobile Navigation */}
-        <AnimatePresence>
-          {isMobileMenuOpen && (
-            <motion.div
-              initial="closed"
-              animate="open"
-              exit="closed"
-              variants={mobileMenuVariants}
-              className="md:hidden pb-4 space-y-4"
-            >
-              {navLinks.map((link) => (
-                <div key={link.id}>
-                  <div className="flex items-center justify-between">
-                    <Link
-                      href={link.href}
-                      className="block text-neutral-300 hover:text-lime-400 py-2 px-4 rounded-lg hover:bg-neutral-800 transition-colors w-full"
-                      onClick={() => {
-                        if (!link.submenu) setIsMobileMenuOpen(false);
+        {isMobileMenuOpen && (
+          <div className="md:hidden pb-4 space-y-4">
+            {navLinks.map((link) => (
+              <div key={link.id}>
+                <div className="flex items-center justify-between">
+                  <Link
+                    href={link.href}
+                    className="block text-neutral-300 hover:text-lime-400 py-2 px-4 rounded-lg hover:bg-neutral-800 transition-colors w-full"
+                    onClick={() => {
+                      if (!link.submenu) setIsMobileMenuOpen(false);
+                    }}
+                  >
+                    {link.name}
+                  </Link>
+                  {link.submenu && (
+                    <button
+                      onClick={(e) => {
+                        e.stopPropagation(); // Prevent closing the mobile menu
+                        const submenu = document.getElementById(
+                          `submenu-${link.id}`
+                        );
+                        submenu?.classList.toggle("hidden");
                       }}
+                      className="p-2 text-neutral-300 hover:text-lime-400"
                     >
-                      {link.name}
-                    </Link>
-                    {link.submenu && (
-                      <button
-                        onClick={() =>
-                          setIsMobileIndustryOpen(!isMobileIndustryOpen)
-                        }
-                        className="p-2 text-neutral-300 hover:text-lime-400"
-                      >
-                        <ChevronDown
-                          className={`h-5 w-5 transition-transform ${
-                            isMobileIndustryOpen ? "rotate-180" : ""
-                          }`}
-                        />
-                      </button>
-                    )}
-                  </div>
-
-                  {link.submenu && isMobileIndustryOpen && (
-                    <div className="ml-6 space-y-2">
-                      {link.submenu.map((subItem) => (
-                        <Link
-                          key={subItem.name}
-                          href={subItem.href}
-                          className="block px-4 py-2 text-sm text-neutral-300 hover:bg-neutral-700/30 rounded-lg transition-colors"
-                          onClick={() => setIsMobileMenuOpen(false)}
-                        >
-                          {subItem.name}
-                        </Link>
-                      ))}
-                    </div>
+                      <ChevronDown className="h-5 w-5 transition-transform" />
+                    </button>
                   )}
                 </div>
-              ))}
-
-              <Button className="w-full bg-lime-400 hover:bg-lime-500 text-neutral-900">
-                Free Consultation
-              </Button>
-            </motion.div>
-          )}
-        </AnimatePresence>
+                {link.submenu && (
+                  <div
+                    id={`submenu-${link.id}`}
+                    className="ml-6  space-y-2 hidden"
+                  >
+                    {link.submenu.map((subItem) => (
+                      <Link
+                        key={subItem.name}
+                        href={subItem.href}
+                        className="block px-4 py-2 text-sm text-neutral-300 hover:bg-neutral-700/30 rounded-lg transition-colors"
+                        onClick={() => setIsMobileMenuOpen(false)}
+                      >
+                        {subItem.name}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
+            ))}
+            <button className="w-full bg-lime-400 hover:bg-lime-500 text-neutral-900 px-6 py-2 rounded-lg font-medium">
+              Free Consultation
+            </button>
+          </div>
+        )}
       </div>
-    </motion.nav>
+    </nav>
   );
 }
