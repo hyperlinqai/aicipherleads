@@ -148,6 +148,12 @@ const Footer: FC = () => {
           </p>
           <div className="flex space-x-6">
             <Link
+              href="/sitemap"
+              className="text-neutral-400 hover:text-lime-400 text-sm transition-colors"
+            >
+              Sitemap
+            </Link>
+            <Link
               href="/privacy-policy"
               className="text-neutral-400 hover:text-lime-400 text-sm transition-colors"
             >
