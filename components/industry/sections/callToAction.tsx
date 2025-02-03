@@ -1,5 +1,6 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { Clock } from "lucide-react";
+import Link from "next/link";
 import React, { useEffect, useRef, useState } from "react";
 
 interface IProps {
@@ -97,18 +98,25 @@ const CallToAction = ({ title, description, trustItems }: IProps) => {
           </motion.div>
 
           {/* Main CTA Button */}
-          <motion.div
-            className="flex justify-center mb-8"
-            whileHover={{ scale: 1.05 }}
-            transition={{ type: "spring", stiffness: 300 }}
+          <Link
+            href={
+              "https://tidycal.com/hyperlinq/30-minutes-free-good-sales-meeting"
+            }
+            target="_blank"
           >
-            <button className="relative overflow-hidden bg-white/95 text-lime-900 px-12 py-5 rounded-2xl text-2xl font-semibold shadow-2xl hover:shadow-3xl transition-all duration-300 group">
-              <span className="relative z-10">
-                Start Your Free Consultation
-              </span>
-              <div className="absolute inset-0 bg-gradient-to-r from-lime-400/20 to-lime-600/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-            </button>
-          </motion.div>
+            <motion.div
+              className="flex justify-center mb-8"
+              whileHover={{ scale: 1.05 }}
+              transition={{ type: "spring", stiffness: 300 }}
+            >
+              <button className="relative overflow-hidden bg-white/95 text-lime-900 px-12 py-5 rounded-2xl text-2xl font-semibold shadow-2xl hover:shadow-3xl transition-all duration-300 group">
+                <span className="relative z-10">
+                  Start Your Free Consultation
+                </span>
+                <div className="absolute inset-0 bg-gradient-to-r from-lime-400/20 to-lime-600/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              </button>
+            </motion.div>
+          </Link>
 
           <p className="text-lime-100/80 text-sm mb-16">
             Limited availability - Only 3 spots remaining this month
@@ -157,10 +165,17 @@ const CallToAction = ({ title, description, trustItems }: IProps) => {
         }}
         transition={{ type: "spring", stiffness: 300, damping: 25 }}
       >
-        <button className="w-full bg-lime-400 text-lime-900 px-8 py-4 rounded-xl text-lg font-bold shadow-xl hover:bg-lime-300 transition-all flex items-center justify-center space-x-2">
-          <Clock className="w-5 h-5" />
-          <span>Book Free Session Now</span>
-        </button>
+        <Link
+          href={
+            "https://tidycal.com/hyperlinq/30-minutes-free-good-sales-meeting"
+          }
+          target="_blank"
+        >
+          <button className="w-full bg-lime-400 text-lime-900 px-8 py-4 rounded-xl text-lg font-bold shadow-xl hover:bg-lime-300 transition-all flex items-center justify-center space-x-2">
+            <Clock className="w-5 h-5" />
+            <span>Book Free Session Now</span>
+          </button>
+        </Link>
       </motion.div>
     </section>
   );
