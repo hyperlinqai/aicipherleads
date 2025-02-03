@@ -12,38 +12,40 @@ const challenges = [
   {
     title: "Low Online Visibility",
     description:
-      "Struggling to stand out in the digital landscape and reach target audiences",
+      "Struggling to stand out in the digital landscape and reach your target audience? Without AI-driven SEO strategies, your business risks being invisible to potential customers.",
     icon: <Binoculars size={24} color="#A3E635" />,
   },
   {
-    title: "Unpredictable Growth",
+    title: "Poor Lead Generation & Conversion Rates",
     description:
-      "Experiencing inconsistent business growth due to market fluctuations",
+      "Is your website traffic not translating into meaningful leads or sales? Inefficient funnels and lack of AI automation could be costing you valuable opportunities.",
     icon: <Activity size={24} color="#A3E635" />,
   },
   {
-    title: "Poor Conversion Rates",
+    title: "Outdated Web Design & Social Media Presence",
     description:
-      "Website traffic isn't translating into meaningful leads or sales",
+      "Does your website fail to engage visitors, or are your social media platforms underperforming? A lack of custom web design and strategic social media management can leave you behind competitors.",
     icon: <ShoppingCart size={24} color="#A3E635" />,
   },
 ];
 
 const solutions = [
   {
-    title: "Data-Driven Strategies",
-    description: "Tailored solutions aligned with your specific business goals",
+    title: "Automate Your Growth – Let AI Do the Heavy Lifting",
+    description:
+      "From AI-driven SEO to automated lead generation, we simplify your marketing so you can focus on growing your business effortlessly.",
     icon: <BarChart3 size={24} color="#A3E635" />,
   },
   {
-    title: "Rapid Implementation",
+    title: "Turn Data into Dollars with Precision Marketing",
     description:
-      "Quick deployment of solutions to maintain competitive advantage",
+      "Our AI-backed strategies deliver measurable results – boosting enrollments, driving foot traffic, and generating leads for your industry.",
     icon: <Rocket size={24} color="#A3E635" />,
   },
   {
-    title: "Expert Team",
-    description: "Dedicated professionals with proven digital growth expertise",
+    title: "Build Trust, Dominate Search, and Win More Customers",
+    description:
+      "From reputation management to custom web design, we help you stand out and attract more customers in a competitive digital world.",
     icon: <Users size={24} color="#A3E635" />,
   },
 ];
@@ -120,11 +122,11 @@ const GrowthSection = () => {
         >
           <motion.div className="text-center mb-20" variants={itemVariants}>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Transform Your Digital Presence
+              AI-Driven Marketing Solutions for Smarter Growth
             </h2>
             <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-              Leverage our expertise to grow your business with data-driven
-              strategies and cutting-edge solutions
+              From AI-Powered SEO to Custom Funnels and Reputation Management –
+              We Deliver Results for Education, Retail, and Service Providers.
             </p>
           </motion.div>
 

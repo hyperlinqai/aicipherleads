@@ -4,21 +4,21 @@ import { useState } from "react";
 
 const testimonials = [
   {
-    name: "Naveen Saharam",
-    company: "Fix 4 You Cellular",
-    text: "Hyperling transformed our online presence completely. Their digital marketing strategies helped us reach more customers and grow our business significantly.",
+    name: "Deepti Mohta",
+    company: "Kids Play School",
+    text: "Working with Cipher Leads has been a game-changer for our play school. Their AI-driven SEO strategies and custom web design helped us double our online inquiries in just 60 days. The team’s deep understanding of the education sector and their data-driven approach made all the difference. Highly recommend it!",
+    avatar: "DM",
+  },
+  {
+    name: "Naveen Saharan",
+    company: "Cell Phone Repair Store",
+    text: "The team at Cipher Leads transformed our retail business with their funnel marketing and social media management. Our foot traffic increased by 40%, and online sales skyrocketed thanks to their targeted campaigns. Their ability to blend creativity with AI automation is unmatched!",
     avatar: "NS",
   },
   {
-    name: "Abhivyakti Jayswal",
-    company: "Anticlothing",
-    text: "Their innovative digital solutions have helped us establish a strong online presence. The results have been exceptional!",
-    avatar: "AJ",
-  },
-  {
     name: "David Esau",
-    company: "Solpacific Pools Inc",
-    text: "Working with Hyperling has been a game-changer for our business. Their expertise in digital marketing has helped us reach new heights.",
+    company: "Pool Remodeling Service",
+    text: "As a local Pool remodeling service provider, we struggled with online visibility. Cipher Leads not only improved our Google rankings with AI SEO but also managed our online reputation brilliantly. Now, we’re the top choice in our area, and our leads have tripled!",
     avatar: "DE",
   },
 

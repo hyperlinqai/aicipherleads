@@ -1,4 +1,5 @@
 import { CheckCircle, Clock, Heart } from "lucide-react";
+import Head from "next/head";
 
 import CallToAction from "@/components/industry/sections/callToAction";
 import Footer from "@/components/industry/sections/footer";
@@ -23,21 +24,31 @@ export default function Home() {
       icon: <Heart className="w-6 h-6" />,
     },
     {
-      value: "30 Days",
+      value: "60 Days",
       label: "Results",
       icon: <CheckCircle className="w-6 h-6" />,
     },
   ];
 
   const CallToActionData = {
-    title: "Transform Your Preschool's Future Today",
+    title: "Ready to Transform Your Business?",
     description:
-      "Join 200+ schools who've doubled admissions with our proven system",
+      "Join 200+ businesses achieving measurable growth with our AI-powered marketing solutions.",
     trustItems: trustItems,
   };
 
   return (
     <div>
+      <Head>
+        <title>
+          AI-Powered Digital Marketing Agency | Boost Growth with Data-Driven
+          Strategies
+        </title>
+        <meta
+          name="description"
+          content="Transform your business with our AI-driven marketing solutions. From SEO and lead generation to custom web design and reputation management, we help education, retail, and service providers scale smarter. Get started today!"
+        />
+      </Head>
       <main className="min-h-screen bg-neutral-900">
         <Header />
         <HeroSection />

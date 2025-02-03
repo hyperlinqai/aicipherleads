@@ -13,7 +13,7 @@ const processSteps = [
     icon: <Search className="w-6 h-6" />,
     subtitle: "Deep Dive Analysis & Roadmap Creation",
     description:
-      "We uncover hidden opportunities through comprehensive market research and competitor analysis",
+      "We uncover hidden opportunities through in-depth market research and competitor insights",
     duration: "1-2 Weeks",
   },
   {
@@ -21,7 +21,7 @@ const processSteps = [
     icon: <LayoutTemplate className="w-6 h-6" />,
     subtitle: "Custom Solution Development",
     description:
-      "Crafting pixel-perfect designs and robust technical implementations tailored to your brand",
+      "We craft pixel-perfect designs and robust technical solutions tailored to your unique brand.",
     duration: "2-4 Weeks",
   },
   {
@@ -29,7 +29,7 @@ const processSteps = [
     icon: <Rocket className="w-6 h-6" />,
     subtitle: "Strategic Market Entry",
     description:
-      "Multi-channel rollout with integrated marketing campaigns for maximum initial impact",
+      "We execute multi-channel rollouts with integrated campaigns for maximum initial impact.",
     duration: "1 Week",
   },
   {
@@ -37,7 +37,7 @@ const processSteps = [
     icon: <TrendingUp className="w-6 h-6" />,
     subtitle: "Continuous Growth Engine",
     description:
-      "Data-driven refinements and expansion strategies to maintain momentum",
+      "We drive data-driven refinements and scalable strategies to sustain long-term growth.",
     duration: "Ongoing",
   },
 ];

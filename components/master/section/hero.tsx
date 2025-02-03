@@ -2,10 +2,10 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 
 const stats = [
-  { value: "50+", label: "Active Schools" },
-  { value: "90%", label: "Success Rate" },
-  { value: "30", label: "Day Results" },
-  { value: "24/7", label: "Support" },
+  { value: "50+", label: "Active Clients Trust Us" },
+  { value: "90%", label: "Success Rate Across Industries" },
+  { value: "30", label: "Day Results Guaranteed" },
+  { value: "24/7", label: "Dedicated Support" },
 ];
 
 const BlobBackground = () => (
@@ -77,14 +77,14 @@ const HeroSection = () => {
             className="text-4xl md:text-6xl font-bold text-white mb-6"
             variants={itemVariants}
           >
-            Grow Your Play School Admissions
+            Transform Your Business with{" "}
             <motion.span
               className="block mt-4 text-lime-400"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4 }}
             >
-              with AI-Driven Marketing.
+              AI-Powered Digital Mastery
             </motion.span>
           </motion.h1>
 
@@ -94,8 +94,10 @@ const HeroSection = () => {
             variants={itemVariants}
             transition={{ delay: 0.2 }}
           >
-            Get the most effective lead generation and marketing solutions
-            designed specifically for preschools and early education centers.
+            Future-ready marketing solutions for Education, Retail, and Service
+            Providers. Leverage AI Automation, Precision SEO, and Custom
+            Strategies to Scale Smarter, Convert Faster, and Dominate Your
+            Market.
           </motion.p>
 
           {/* Buttons */}
@@ -112,7 +114,7 @@ const HeroSection = () => {
               onHoverEnd={() => setIsHovered(false)}
             >
               <span className="relative z-10 flex items-center gap-2">
-                Get Free Consultation
+                Unlock Your Free Growth Audit
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="h-5 w-5"
@@ -133,13 +135,13 @@ const HeroSection = () => {
               />
             </motion.button>
 
-            <motion.button
+            {/* <motion.button
               className="border-2 border-lime-400 text-white px-8 py-3.5 rounded-xl font-semibold hover:bg-lime-400/10 transition-colors"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
               Explore Solutions
-            </motion.button>
+            </motion.button> */}
           </motion.div>
 
           {/* Stats Cards */}

@@ -104,7 +104,7 @@ const CallToAction = ({ title, description, trustItems }: IProps) => {
           >
             <button className="relative overflow-hidden bg-white/95 text-lime-900 px-12 py-5 rounded-2xl text-2xl font-semibold shadow-2xl hover:shadow-3xl transition-all duration-300 group">
               <span className="relative z-10">
-                Claim Your Free Strategy Session
+                Start Your Free Consultation
               </span>
               <div className="absolute inset-0 bg-gradient-to-r from-lime-400/20 to-lime-600/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             </button>
