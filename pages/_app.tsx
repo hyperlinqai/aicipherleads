@@ -11,6 +11,20 @@ const poppins = Poppins({
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <div className={`${poppins.variable} `}>
+      <>
+        {/* <!-- Google tag (gtag.js) --> */}
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-XMZRVYHV7X"
+        ></script>
+        <script>
+          {`window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+
+                gtag('config', 'G-XMZRVYHV7X');`}
+        </script>
+      </>
       <Component {...pageProps} />
     </div>
   );
