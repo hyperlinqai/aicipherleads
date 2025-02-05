@@ -1,6 +1,7 @@
 import "@/styles/globals.css";
 
 import { Poppins } from "next/font/google";
+import Head from "next/head";
 
 import type { AppProps } from "next/app";
 const poppins = Poppins({
@@ -11,6 +12,12 @@ const poppins = Poppins({
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <div className={`${poppins.variable} `}>
+      <Head>
+        <meta
+          name="google-site-verification"
+          content="AWSvun-rrzEz7y2O-ETu_jaG8VgAQWrkockvFdTSkdg"
+        />
+      </Head>
       <>
         {/* <!-- Google tag (gtag.js) --> */}
         <script
