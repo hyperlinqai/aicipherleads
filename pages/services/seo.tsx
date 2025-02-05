@@ -48,7 +48,7 @@ const Seo = () => {
       icon: <Heart className="w-6 h-6" />,
     },
     {
-      value: "30 Days",
+      value: "60 Days",
       label: "Results",
       icon: <CheckCircle className="w-6 h-6" />,
     },
@@ -213,11 +213,6 @@ const Seo = () => {
       question: "What industries do you specialize in?",
       answer:
         "We work with businesses across various industries, including education, healthcare, e-commerce, and professional services.",
-    },
-    {
-      question: "Is there a money-back guarantee?",
-      answer:
-        "Yes, we offer a 30-day money-back guarantee if you're not satisfied with our services.",
     },
   ];
 

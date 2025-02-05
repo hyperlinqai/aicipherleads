@@ -29,11 +29,11 @@ import KeyFeaturesGrid from "@/components/service/keyFeature";
 import ProcessBreakdown from "@/components/service/processBreakdown";
 import TechnicalDeepDive from "@/components/service/technical";
 
-const Seo = () => {
+const WebDesign = () => {
   const serviceHomeSection = {
-    title: "Elevate Your Business with Tailored Solutions",
+    title: "Elevate Your Brand with Cutting-Edge Web & Mobile Design",
     description:
-      "Discover comprehensive services designed to drive growth, enhance efficiency, and deliver measurable results.",
+      "Transform your online presence with custom-built websites and mobile applications designed for performance, aesthetics, and user engagement.",
   };
 
   const trustItems = [
@@ -48,111 +48,112 @@ const Seo = () => {
       icon: <Heart className="w-6 h-6" />,
     },
     {
-      value: "30 Days",
+      value: "60 Days",
       label: "Results",
       icon: <CheckCircle className="w-6 h-6" />,
     },
   ];
 
   const CallToActionData = {
-    title: "Transform Your Preschool's Future Today",
+    title: "Start Your Project Today",
     description:
-      "Join 200+ schools who've doubled admissions with our proven system",
+      "Turn your ideas into stunning digital experiences. Get a free consultation now!",
     trustItems: trustItems,
   };
 
   const keyFeatures = [
     {
       icon: <Target size={40} strokeWidth={1.5} />,
-      title: "Targeted Audience Acquisition",
-      text: "Laser-focused campaigns to reach decision-makers in your niche.",
+      title: "User-Centric UI/UX Design",
+      text: "We craft intuitive, visually stunning designs that enhance user experience and engagement.",
     },
     {
       icon: <BarChart3 size={40} strokeWidth={1.5} />,
-      title: "Qualified Lead Scoring",
-      text: "AI ranks leads by intent, budget, and readiness to buy.",
+      title: "Custom Website Development",
+      text: "From sleek business websites to robust eCommerce platforms, we develop sites that convert visitors into customers.",
     },
     {
       icon: <Lightbulb size={40} strokeWidth={1.5} />,
-      title: "Marketing Automation",
-      text: "Nurture leads 24/7 with drip campaigns and behavior triggers.",
+      title: "SEO-Optimized Development",
+      text: "Built-in SEO best practices ensure your website ranks higher on search engines and attracts organic traffic",
     },
     {
       icon: <RefreshCcw size={40} strokeWidth={1.5} />,
-      title: "CRM Integration",
-      text: "Sync leads seamlessly with HubSpot, Salesforce, or custom tools.",
+      title: "Performance & Security Optimization",
+      text: "Lightning-fast load times, secure coding practices, and compliance with industry standards",
     },
   ];
 
   const processSteps = [
     {
-      title: "Audience Mapping",
+      title: "Discovery & Strategy",
       icon: <MapPin className="w-6 h-6" />,
-      description: "Identify high-value demographics and pain points.",
+      description:
+        "Understanding your goals, target audience, and industry trends",
     },
     {
-      title: "Campaign Launch",
+      title: "Design & Prototyping",
       icon: <Rocket className="w-6 h-6" />,
-      description: "Multi-channel ads, SEO, and LinkedIn outreach.",
+      description:
+        "Creating wireframes and high-fidelity prototypes for seamless user experiences",
     },
     {
-      title: "Lead Filtering",
+      title: "Development & Optimization",
       icon: <Filter className="w-6 h-6" />,
-      description: "AI scores leads in real-time to prioritize sales efforts.",
+      description:
+        "Building responsive, SEO-friendly, and scalable websites/apps",
     },
     {
-      title: "Conversion Optimization",
+      title: "Testing & Deployment",
       icon: <Repeat className="w-6 h-6" />,
-      description: "Automated follow-ups and CRM-driven nurturing.",
+      description:
+        "Ensuring flawless functionality, speed, and security before going live.",
     },
   ];
 
   const processBreakdownData = {
-    title: "Our 4-Step Lead Generation Engine",
+    title: "Our 4-Step Web Development Process",
     description:
-      " A streamlined process to attract, qualify, and convert leads into loyal customers.",
+      "A streamlined approach to crafting high-performance websites and apps.",
     processSteps,
   };
 
   const deliverables = [
     {
-      title: "Targeted Audience Acquisition",
+      title: "Custom Web & Mobile Design",
       icon: <Target size={40} strokeWidth={1.5} />,
-      description:
-        "Laser-focused campaigns to reach decision-makers in your niche.",
+      description: "Tailored solutions to match your brand identity.",
     },
     {
-      title: "Qualified Lead Scoring",
+      title: "SEO & Performance-Optimized Code",
       icon: <BarChart3 size={40} strokeWidth={1.5} />,
-      description: "AI ranks leads by intent, budget, and readiness to buy.",
+      description: "Faster load times and improved rankings.",
     },
     {
-      title: "Marketing Automation",
+      title: "Scalability & Future-Proofing",
       icon: <Lightbulb size={40} strokeWidth={1.5} />,
-      description:
-        "Nurture leads 24/7 with drip campaigns and behavior triggers.",
+      description: "Websites and apps that grow with your business.",
     },
     {
-      title: "CRM Integration",
+      title: "Ongoing Support & Maintenance",
       icon: <RefreshCcw size={40} strokeWidth={1.5} />,
-      description:
-        "Sync leads seamlessly with HubSpot, Salesforce, or custom tools.",
+      description: "Keeping your site/app updated and secure.",
     },
   ];
 
   const deliverableData = {
-    title: "What You Get with Advanced Lead Generation",
+    title: "What You Get with Our Web & Mobile Development Services",
     description:
-      "A comprehensive suite of tools and strategies to attract, qualify, and convert high-quality leads.",
+      "A comprehensive suite of tools and strategies to attract, qualify, and convert high-quality development.",
     deliverables,
   };
 
   const deepDiveFeatures = [
     {
-      title: "AI-Powered Algorithms",
+      title: "Modern Tech Stack",
       icon: <Cpu size={40} strokeWidth={1.5} />,
       description:
-        "Our advanced AI algorithms analyze data patterns to optimize lead generation and targeting strategies.",
+        "We use the latest frameworks and technologies for cutting-edge development.",
     },
     {
       title: "Scalable Infrastructure",
@@ -161,10 +162,9 @@ const Seo = () => {
         "Built on cloud-native architecture to handle high traffic and ensure seamless scalability.",
     },
     {
-      title: "Customizable Workflows",
+      title: "User-Centric Interfaces",
       icon: <Settings size={40} strokeWidth={1.5} />,
-      description:
-        "Flexible workflows tailored to your business needs for maximum efficiency and control.",
+      description: "Designed with UX/UI best practices to maximize engagement.",
     },
     {
       title: "Real-Time Analytics",
@@ -173,10 +173,10 @@ const Seo = () => {
         "Track performance metrics in real-time to make data-driven decisions and refine strategies.",
     },
     {
-      title: "Modular Design",
+      title: "Secure Development Practices",
       icon: <Layers size={40} strokeWidth={1.5} />,
       description:
-        "Modular components allow easy integration with existing systems and future upgrades.",
+        "Data encryption, SSL integration, and security audits for maximum protection.",
     },
     {
       title: "Secure Data Handling",
@@ -195,14 +195,14 @@ const Seo = () => {
 
   const faqs = [
     {
-      question: "What services do you offer?",
+      question: "What types of websites do you develop?",
       answer:
-        "We provide a range of digital marketing services including lead generation, AI-powered SEO, social media management, web design, funnel marketing, and online reputation management.",
+        "We build business websites, eCommerce platforms, portfolio sites, and custom applications.",
     },
     {
-      question: "How long does it take to see results?",
+      question: "Do you offer mobile app development?",
       answer:
-        "Results vary depending on the service and your business goals. Typically, you can expect to see initial improvements within 1-3 months.",
+        "Yes! We design and develop native and cross-platform apps for iOS and Android.",
     },
     {
       question: "Do you offer custom solutions?",
@@ -210,14 +210,14 @@ const Seo = () => {
         "Yes, we tailor our strategies to meet your specific business needs and objectives.",
     },
     {
-      question: "What industries do you specialize in?",
+      question: "How long does the development process take?",
       answer:
-        "We work with businesses across various industries, including education, healthcare, e-commerce, and professional services.",
+        "Timelines vary based on project complexity, but we ensure efficient turnaround times.",
     },
     {
-      question: "Is there a money-back guarantee?",
+      question: "Will my website be SEO-friendly?",
       answer:
-        "Yes, we offer a 30-day money-back guarantee if you're not satisfied with our services.",
+        "Absolutely! Our websites are optimized for search engines from the ground up.",
     },
   ];
 
@@ -245,4 +245,4 @@ const Seo = () => {
   );
 };
 
-export default Seo;
+export default WebDesign;
