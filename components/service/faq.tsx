@@ -2,35 +2,16 @@ import { motion } from "framer-motion";
 import { ChevronDown, ChevronUp } from "lucide-react";
 import React, { useState } from "react";
 
-const faqs = [
-  {
-    question: "What services do you offer?",
-    answer:
-      "We provide a range of digital marketing services including lead generation, AI-powered SEO, social media management, web design, funnel marketing, and online reputation management.",
-  },
-  {
-    question: "How long does it take to see results?",
-    answer:
-      "Results vary depending on the service and your business goals. Typically, you can expect to see initial improvements within 1-3 months.",
-  },
-  {
-    question: "Do you offer custom solutions?",
-    answer:
-      "Yes, we tailor our strategies to meet your specific business needs and objectives.",
-  },
-  {
-    question: "What industries do you specialize in?",
-    answer:
-      "We work with businesses across various industries, including education, healthcare, e-commerce, and professional services.",
-  },
-  {
-    question: "Is there a money-back guarantee?",
-    answer:
-      "Yes, we offer a 30-day money-back guarantee if you're not satisfied with our services.",
-  },
-];
+interface IProps {
+  title: string;
+  description: string;
+  faqs: {
+    question: string;
+    answer: string;
+  }[];
+}
 
-const FAQSection = () => {
+const FAQSection = ({ title, description, faqs }: IProps) => {
   const [activeIndex, setActiveIndex] = useState<null | number>(null);
 
   const toggleAnswer = (index: number) => {
@@ -69,13 +50,13 @@ const FAQSection = () => {
             className="text-3xl md:text-4xl font-bold text-white mb-4"
             variants={itemVariants}
           >
-            Frequently Asked Questions
+            {title}
           </motion.h2>
           <motion.p
             className="text-lg text-gray-300 max-w-2xl mx-auto"
             variants={itemVariants}
           >
-            Get answers to common questions about our services and processes.
+            {description}
           </motion.p>
         </motion.div>
 

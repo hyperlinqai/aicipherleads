@@ -1,33 +1,16 @@
 import { motion } from "framer-motion";
-import { BarChart3, Lightbulb, RefreshCcw, Target } from "lucide-react";
+import { ReactNode } from "react";
 
-const deliverables = [
-  {
-    title: "Targeted Audience Acquisition",
-    icon: <Target size={40} strokeWidth={1.5} />,
-    description:
-      "Laser-focused campaigns to reach decision-makers in your niche.",
-  },
-  {
-    title: "Qualified Lead Scoring",
-    icon: <BarChart3 size={40} strokeWidth={1.5} />,
-    description: "AI ranks leads by intent, budget, and readiness to buy.",
-  },
-  {
-    title: "Marketing Automation",
-    icon: <Lightbulb size={40} strokeWidth={1.5} />,
-    description:
-      "Nurture leads 24/7 with drip campaigns and behavior triggers.",
-  },
-  {
-    title: "CRM Integration",
-    icon: <RefreshCcw size={40} strokeWidth={1.5} />,
-    description:
-      "Sync leads seamlessly with HubSpot, Salesforce, or custom tools.",
-  },
-];
-
-const DeliverablesSection = () => {
+interface IProps {
+  title: string;
+  description: string;
+  deliverables: {
+    title: string;
+    icon: ReactNode;
+    description: string;
+  }[];
+}
+const DeliverablesSection = ({ title, description, deliverables }: IProps) => {
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -65,14 +48,13 @@ const DeliverablesSection = () => {
             className="text-3xl md:text-4xl font-bold text-white mb-4"
             variants={itemVariants}
           >
-            What You Get with Advanced Lead Generation
+            {title}
           </motion.h2>
           <motion.p
             className="text-lg text-gray-300 max-w-2xl mx-auto"
             variants={itemVariants}
           >
-            A comprehensive suite of tools and strategies to attract, qualify,
-            and convert high-quality leads.
+            {description}
           </motion.p>
         </motion.div>
 

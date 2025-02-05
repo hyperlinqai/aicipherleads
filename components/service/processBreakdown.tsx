@@ -1,30 +1,16 @@
 import { motion } from "framer-motion";
-import { Filter, MapPin, Repeat, Rocket } from "lucide-react";
 
-const processSteps = [
-  {
-    title: "Audience Mapping",
-    icon: <MapPin className="w-6 h-6" />,
-    description: "Identify high-value demographics and pain points.",
-  },
-  {
-    title: "Campaign Launch",
-    icon: <Rocket className="w-6 h-6" />,
-    description: "Multi-channel ads, SEO, and LinkedIn outreach.",
-  },
-  {
-    title: "Lead Filtering",
-    icon: <Filter className="w-6 h-6" />,
-    description: "AI scores leads in real-time to prioritize sales efforts.",
-  },
-  {
-    title: "Conversion Optimization",
-    icon: <Repeat className="w-6 h-6" />,
-    description: "Automated follow-ups and CRM-driven nurturing.",
-  },
-];
+interface IProps {
+  title: string;
+  description: string;
+  processSteps: {
+    title: string;
+    icon: React.ReactNode;
+    description: string;
+  }[];
+}
 
-const ProcessBreakdown = () => {
+const ProcessBreakdown = ({ title, description, processSteps }: IProps) => {
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -57,14 +43,13 @@ const ProcessBreakdown = () => {
             className="text-3xl md:text-4xl font-bold text-white mb-4"
             variants={itemVariants}
           >
-            Our 4-Step Lead Generation Engine
+            {title}
           </motion.h2>
           <motion.p
             className="text-lg text-gray-300 max-w-2xl mx-auto"
             variants={itemVariants}
           >
-            A streamlined process to attract, qualify, and convert leads into
-            loyal customers.
+            {description}
           </motion.p>
         </motion.div>
 

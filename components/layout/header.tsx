@@ -15,9 +15,9 @@ export function Header() {
       href: "#",
       submenu: [
         { name: "Advanced Lead Generation", href: "#" },
-        { name: "AI-Powered SEO", href: "#" },
+        { name: "AI-Powered SEO", href: "/services/seo" },
         { name: "Social Media Management", href: "#" },
-        { name: "Web Design & Development", href: "#" },
+        { name: "Web Design & Development", href: "/services/web-design" },
         { name: "Funnel Marketing", href: "#" },
         { name: "Online Reputation Management", href: "#" },
       ],
@@ -27,8 +27,8 @@ export function Header() {
       name: "Industry",
       href: "#",
       submenu: [
-        { name: "Pre-school", href: "/industry/pre-school" },
-        { name: "Professional", href: "#" },
+        { name: "Education", href: "/industry/education" },
+        { name: "Professional Services", href: "#" },
         { name: "Retail", href: "#" },
       ],
     },
@@ -143,9 +143,16 @@ export function Header() {
                 )}
               </div>
             ))}
-            <button className="w-full bg-lime-400 hover:bg-lime-500 text-neutral-900 px-6 py-2 rounded-lg font-medium">
-              Free Consultation
-            </button>
+            <Link
+              href={
+                "https://tidycal.com/hyperlinq/30-minutes-free-good-sales-meeting"
+              }
+              target="_blank"
+            >
+              <button className="w-full bg-lime-400 hover:bg-lime-500 text-neutral-900 px-6 py-2 rounded-lg font-medium">
+                Free Consultation
+              </button>
+            </Link>
           </div>
         )}
       </div>

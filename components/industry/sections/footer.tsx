@@ -51,7 +51,7 @@ const Footer: FC = () => {
             <ul className="space-y-3 text-neutral-400 mb-6">
               <li className="flex items-center">
                 <Mail className="w-5 h-5 mr-2 text-lime-400" />
-                info@cipherleads.com
+                info@aicipherleads[dot]com
               </li>
               <li className="flex items-center">
                 <Phone className="w-5 h-5 mr-2 text-lime-400" />
@@ -123,16 +123,18 @@ const Footer: FC = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4">Industries We Serve</h3>
             <ul className="space-y-3">
-              {["Pre-School", "Cell Phone", "Entrepreneur"].map((industry) => (
-                <li key={industry}>
-                  <a
-                    href="#"
-                    className="text-neutral-400 hover:text-lime-400 transition-colors"
-                  >
-                    {industry}
-                  </a>
-                </li>
-              ))}
+              {["Education", "Retail", "Professional Services"].map(
+                (industry) => (
+                  <li key={industry}>
+                    <a
+                      href="#"
+                      className="text-neutral-400 hover:text-lime-400 transition-colors"
+                    >
+                      {industry}
+                    </a>
+                  </li>
+                )
+              )}
             </ul>
           </div>
         </motion.div>

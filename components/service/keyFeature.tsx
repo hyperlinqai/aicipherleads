@@ -1,8 +1,16 @@
 import { motion } from "framer-motion";
-import { BarChart3, Lightbulb, RefreshCcw, Target } from "lucide-react";
 import React from "react";
 
-const KeyFeaturesGrid = () => {
+interface IProps {
+  title: string;
+  features: {
+    icon: React.ReactNode;
+    title: string;
+    text: string;
+  }[];
+}
+
+const KeyFeaturesGrid = ({ title, features }: IProps) => {
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -18,29 +26,6 @@ const KeyFeaturesGrid = () => {
     hidden: { y: 20, opacity: 0 },
     visible: { y: 0, opacity: 1 },
   };
-
-  const features = [
-    {
-      icon: <Target size={40} strokeWidth={1.5} />,
-      title: "Targeted Audience Acquisition",
-      text: "Laser-focused campaigns to reach decision-makers in your niche.",
-    },
-    {
-      icon: <BarChart3 size={40} strokeWidth={1.5} />,
-      title: "Qualified Lead Scoring",
-      text: "AI ranks leads by intent, budget, and readiness to buy.",
-    },
-    {
-      icon: <Lightbulb size={40} strokeWidth={1.5} />,
-      title: "Marketing Automation",
-      text: "Nurture leads 24/7 with drip campaigns and behavior triggers.",
-    },
-    {
-      icon: <RefreshCcw size={40} strokeWidth={1.5} />,
-      title: "CRM Integration",
-      text: "Sync leads seamlessly with HubSpot, Salesforce, or custom tools.",
-    },
-  ];
 
   return (
     <section className="bg-neutral-900 py-20 relative overflow-hidden">
@@ -63,7 +48,7 @@ const KeyFeaturesGrid = () => {
           className="text-3xl md:text-4xl font-bold text-white text-center mb-12"
           variants={itemVariants}
         >
-          How We Supercharge Your Lead Pipeline
+          {title}
         </motion.h2>
 
         {/* Features Grid */}

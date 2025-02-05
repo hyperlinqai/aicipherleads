@@ -1,7 +1,13 @@
 import { motion } from "framer-motion";
+import Link from "next/link";
 import React from "react";
 
-const ServiceHomeSection = () => {
+interface IProps {
+  title: string;
+  description: string;
+}
+
+const ServiceHomeSection = ({ title, description }: IProps) => {
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -45,7 +51,7 @@ const ServiceHomeSection = () => {
           className="text-4xl sm:text-5xl font-bold mb-6"
           variants={itemVariants}
         >
-          Elevate Your Business with Tailored Solutions
+          {title}
         </motion.h1>
 
         {/* Subtitle */}
@@ -53,8 +59,7 @@ const ServiceHomeSection = () => {
           className="text-lg sm:text-xl text-neutral-300 mb-12"
           variants={itemVariants}
         >
-          Discover comprehensive services designed to drive growth, enhance
-          efficiency, and deliver measurable results.
+          {description}
         </motion.p>
 
         {/* Call-to-Action Buttons */}
@@ -62,12 +67,19 @@ const ServiceHomeSection = () => {
           className="flex flex-col sm:flex-row justify-center gap-4"
           variants={itemVariants}
         >
-          <button className="bg-lime-500 text-neutral-900 font-semibold py-3 px-8 rounded-full hover:bg-lime-600 transition-all">
-            Explore Services
-          </button>
-          <button className="bg-neutral-700 text-white font-semibold py-3 px-8 rounded-full hover:bg-neutral-600 transition-all">
+          <Link
+            href={
+              "https://tidycal.com/hyperlinq/30-minutes-free-good-sales-meeting"
+            }
+            target="_blank"
+          >
+            <button className="bg-lime-500 text-neutral-900 font-semibold py-3 px-8 rounded-full hover:bg-lime-600 transition-all">
+              Get a Free Consultation
+            </button>
+          </Link>
+          {/* <button className="bg-neutral-700 text-white font-semibold py-3 px-8 rounded-full hover:bg-neutral-600 transition-all">
             Get Free Consultation
-          </button>
+          </button> */}
         </motion.div>
       </motion.div>
 

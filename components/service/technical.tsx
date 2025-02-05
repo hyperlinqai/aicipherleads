@@ -1,46 +1,21 @@
 import { motion } from "framer-motion";
-import { Code, Cpu, Database, Layers, Settings, Zap } from "lucide-react";
+import { ReactNode } from "react";
 
-const deepDiveFeatures = [
-  {
-    title: "AI-Powered Algorithms",
-    icon: <Cpu size={40} strokeWidth={1.5} />,
-    description:
-      "Our advanced AI algorithms analyze data patterns to optimize lead generation and targeting strategies.",
-  },
-  {
-    title: "Scalable Infrastructure",
-    icon: <Database size={40} strokeWidth={1.5} />,
-    description:
-      "Built on cloud-native architecture to handle high traffic and ensure seamless scalability.",
-  },
-  {
-    title: "Customizable Workflows",
-    icon: <Settings size={40} strokeWidth={1.5} />,
-    description:
-      "Flexible workflows tailored to your business needs for maximum efficiency and control.",
-  },
-  {
-    title: "Real-Time Analytics",
-    icon: <Zap size={40} strokeWidth={1.5} />,
-    description:
-      "Track performance metrics in real-time to make data-driven decisions and refine strategies.",
-  },
-  {
-    title: "Modular Design",
-    icon: <Layers size={40} strokeWidth={1.5} />,
-    description:
-      "Modular components allow easy integration with existing systems and future upgrades.",
-  },
-  {
-    title: "Secure Data Handling",
-    icon: <Code size={40} strokeWidth={1.5} />,
-    description:
-      "End-to-end encryption and compliance with industry standards to protect sensitive data.",
-  },
-];
+interface IProps {
+  title: string;
+  description: string;
+  deepDiveFeatures: {
+    title: string;
+    icon: ReactNode;
+    description: string;
+  }[];
+}
 
-const TechnicalDeepDive = () => {
+const TechnicalDeepDive = ({
+  title,
+  description,
+  deepDiveFeatures,
+}: IProps) => {
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -89,14 +64,13 @@ const TechnicalDeepDive = () => {
             className="text-3xl md:text-4xl font-bold text-white mb-4"
             variants={itemVariants}
           >
-            Technical Deep Dive
+            {title}
           </motion.h2>
           <motion.p
             className="text-lg text-gray-300 max-w-2xl mx-auto"
             variants={itemVariants}
           >
-            Explore the cutting-edge technology and methodologies that power our
-            solutions.
+            {description}
           </motion.p>
         </motion.div>
 
