@@ -83,8 +83,8 @@ const services = [
 const stats = [
   { value: "24/7", label: "Support Available" },
   { value: "100%", label: "Satisfaction Rate" },
-  { value: "30 Days", label: "Money Back Guarantee" },
-  { value: "50+", label: "Expert Team Members" },
+  { value: "60 Days", label: "Money Back GuaranteeResult" },
+  { value: "15+", label: "Expert Team Members" },
 ];
 
 const ServicesSection = () => {

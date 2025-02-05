@@ -4,7 +4,7 @@ import { useState } from "react";
 const stats = [
   { value: "50+", label: "Active Clients Trust Us" },
   { value: "90%", label: "Success Rate Across Industries" },
-  { value: "30", label: "Day Results Guaranteed" },
+  { value: "60", label: "Day Results" },
   { value: "24/7", label: "Dedicated Support" },
 ];
 
