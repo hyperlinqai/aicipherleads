@@ -17,10 +17,13 @@ export function Header() {
         { name: "Agentic AI", href: "/services/ai" },
         { name: "Advanced Lead Generation", href: "/services/lead-generation" },
         { name: "AI-Powered SEO", href: "/services/seo" },
-        { name: "Social Media Management", href: "#" },
+        { name: "Social Media Management", href: "/services/social-media" },
         { name: "Web Design & Development", href: "/services/web-design" },
-        { name: "Funnel Marketing", href: "#" },
-        { name: "Online Reputation Management", href: "#" },
+        { name: "Funnel Marketing", href: "/services/funnel-marketing" },
+        {
+          name: "Online Reputation Management",
+          href: "/services/online-reputation-management",
+        },
       ],
     },
     {
