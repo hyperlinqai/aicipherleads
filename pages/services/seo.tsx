@@ -17,6 +17,7 @@ import {
   Target,
   Zap,
 } from "lucide-react";
+import Head from "next/head";
 import React from "react";
 
 import CallToAction from "@/components/industry/sections/callToAction";
@@ -224,6 +225,13 @@ const Seo = () => {
   };
   return (
     <div>
+      <Head>
+        <title>AI-Powered SEO Company in Indore | Ai Cipher Lead</title>
+        <meta
+          name="description"
+          content="Ai Cipher Lead is an AI-powered SEO company in Indore, making it a great choice for those looking for the best AI SEO services in Indore. Call Now!"
+        />
+      </Head>
       <Header />
       <ServiceHomeSection {...serviceHomeSection} />
       <KeyFeaturesGrid

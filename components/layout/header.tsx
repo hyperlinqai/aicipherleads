@@ -48,14 +48,17 @@ export function Header() {
           <div className="hidden md:flex items-center gap-8">
             {navLinks.map((link) => (
               <div key={link.id} className="relative group">
-                <div className="flex items-center gap-1 text-neutral-300 hover:text-lime-400 transition-colors text-sm font-medium cursor-pointer">
+                <Link
+                  className="flex items-center gap-1 text-neutral-300 hover:text-lime-400 transition-colors text-sm font-medium cursor-pointer"
+                  href={link.href}
+                >
                   {link.name}
                   {link.submenu && (
                     <ChevronDown className="h-4 w-4 transition-transform group-hover:rotate-180" />
                   )}
-                </div>
+                </Link>
                 {link.submenu && (
-                  <div className="absolute top-full left-0 mt-2 w-60  bg-neutral-800/95 backdrop-blur-sm rounded-xl p-2 border border-neutral-700 shadow-lg z-10 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+                  <div className="absolute top-full left-0 mt-2 w-max  bg-neutral-800/95 backdrop-blur-sm rounded-xl p-2 border border-neutral-700 shadow-lg z-10 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
                     {link.submenu.map((subItem) => (
                       <Link
                         key={subItem.name}

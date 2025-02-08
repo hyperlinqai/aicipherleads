@@ -17,6 +17,7 @@ import {
   Target,
   Zap,
 } from "lucide-react";
+import Head from "next/head";
 import React from "react";
 
 import CallToAction from "@/components/industry/sections/callToAction";
@@ -229,6 +230,13 @@ const WebDesign = () => {
   };
   return (
     <div>
+      <Head>
+        <title>Web Design Company in Indore | Ai Cipher Lead</title>
+        <meta
+          name="description"
+          content="Ai Cipher Lead, an innovative AI-powered web design company in Indore. specializes in AI web development and design to elevate your brand. Contact us now!"
+        />
+      </Head>
       <Header />
       <ServiceHomeSection {...serviceHomeSection} />
       <KeyFeaturesGrid
