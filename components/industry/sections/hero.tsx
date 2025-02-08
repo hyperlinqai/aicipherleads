@@ -12,8 +12,6 @@ interface IProps {
   cta: {
     primary: string;
     primaryClick: () => void;
-    secondary: string;
-    secondaryClick: () => void;
   };
   rightContainer: {
     title: string;
@@ -72,19 +70,19 @@ export function Hero({ title, description, cta, rightContainer }: IProps) {
               </Button>
             </motion.div>
 
-            <motion.div
+            {/* <motion.div
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="relative"
             >
               <Button
                 variant="outline"
-                size="lg"
+                size="lg"  
                 className="w-full sm:w-auto border-lime-400 text-lime-400 hover:bg-lime-400/10 hover:text-lime-300 text-base sm:text-lg py-6 sm:py-5 px-8"
               >
                 {cta.secondary}
               </Button>
-            </motion.div>
+            </motion.div> */}
           </div>
         </motion.div>
 

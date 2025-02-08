@@ -21,23 +21,23 @@ import { Header } from "@/components/layout/header";
 // -----------------Hero section Data Start-----------------
 const HeroSectionData = {
   title: {
-    main: "Grow Your Play School Admissions",
+    main: "Boost Your Cell Phone Retail Sales",
     span: "with AI-Driven Marketing.",
   },
   description:
-    "Unlock the power of AI-driven marketing to boost your preschool's admissions and engage parents like never before.",
+    "Unlock the power of AI-driven digital marketing to increase in-store foot traffic, boost smartphone sales, and drive online conversions for your cell phone retail store.",
   cta: {
     primary: "Get Free Consultation",
     primaryClick: () => {},
   },
   rightContainer: [
     {
-      title: "50+",
-      description: "Happy Schools",
+      title: "20+",
+      description: "Successful Retailers",
     },
     {
       title: "90%",
-      description: "Success Rate",
+      description: "Sales Growth",
     },
   ],
 };
@@ -49,26 +49,27 @@ const problems = [
     icon: <MapPin className="w-full h-full" />,
     title: "Low Online Visibility",
     description:
-      "Parents can't find your preschool online when searching for options in your area.",
+      "Your cell phone retail store isn’t showing up in local searches for “best smartphone deals” or “mobile phone stores near me.”",
   },
   {
     icon: <Building2 className="w-full h-full" />,
     title: "High Local Competition",
     description:
-      "Standing out among numerous preschools in your neighborhood is becoming harder.",
+      "Competing with large electronics chains and online marketplaces requires a standout digital strategy.",
   },
   {
     icon: <Monitor className="w-full h-full" />,
-    title: "Outdated Marketing",
+    title: "Outdated Marketing Strategies",
     description:
-      "Traditional marketing methods aren't reaching today's tech-savvy parents effectively.",
+      "Traditional advertising methods no longer resonate with tech-savvy, mobile-first customers.",
   },
 ];
 
 const problemStatementData = {
-  title: "Are You Struggling to Attract More Admissions?",
+  title:
+    "Are You Struggling to Attract More Customers to Your Cell Phone Store?",
   description:
-    "Common challenges faced by preschool owners in today's competitive market",
+    "Common challenges faced by cell phone retail businesses in today’s competitive market:",
   problems: problems,
 };
 
@@ -77,31 +78,31 @@ const problemStatementData = {
 // ---------------------Solution Section Data start---------------------
 const steps = [
   {
-    title: "Audit",
+    title: "Audit & Data Analysis",
     icon: "M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2",
-    desc: "Comprehensive analysis of your current marketing strategy and digital presence.",
+    desc: "Conduct a comprehensive review of your current digital marketing efforts and online presence to identify improvement areas.",
   },
   {
-    title: "Strategy",
+    title: "Custom Strategy Development",
     icon: "M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z",
-    desc: "Custom marketing plan tailored to your preschool's unique needs.",
+    desc: "Create a tailored, data-driven marketing plan that targets local customers searching for cell phones, accessories, and mobile deals.",
   },
   {
-    title: "Launch",
+    title: "Campaign Launch & Optimization",
     icon: "M13 10V3L4 14h7v7l9-11h-7z",
-    desc: "Implementation of AI-driven marketing campaigns and optimization.",
+    desc: "Implement multi-channel campaigns using targeted social media ads, local SEO, and pay-per-click (PPC) strategies to drive quality leads.",
   },
   {
-    title: "Results",
+    title: "Results & Continuous Improvement",
     icon: "M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z",
-    desc: "Measurable growth in admissions and parent engagement.",
+    desc: "Utilize real-time analytics and A/B testing to refine campaigns, ensuring maximum conversion rates and sustained growth.",
   },
 ];
 
 const SolutionsSectionData = {
-  title: "How We Turn Challenges into Admissions",
+  title: "How We Turn Marketing Challenges into Increased Sales",
   description:
-    "Our proven 4-step process to transform your preschool's digital presence",
+    "Our proven 4-Step AI-Driven Marketing Process is designed to transform your cell phone retail",
   steps: steps,
 };
 
@@ -110,30 +111,31 @@ const SolutionsSectionData = {
 // ---------------------------Benefit Section Data Start---------------------
 const benefits = [
   {
-    title: "40% More Admissions",
+    title: "Local SEO & Mobile Optimization",
     icon: "M13 10V3L4 14h7v7l9-11h-7z",
-    desc: "Average increase in enrollment rates within the first 3 months",
+    desc: "Dominate local search results and ensure your website is optimized for mobile users searching for “cell phone deals near me.”",
   },
   {
-    title: "Parent-Friendly Campaigns",
+    title: "AI-Powered Digital Campaigns",
     icon: "M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z",
-    desc: "Targeted messaging that resonates with modern parents",
+    desc: "Leverage advanced AI technology to target customers based on search behavior and local trends, ensuring higher engagement and conversion rates.",
   },
   {
-    title: "Data-Driven Results",
+    title: "Social Media Advertising",
     icon: "M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z",
-    desc: "Real-time analytics and performance tracking",
+    desc: "Run hyper-targeted ads on platforms like Facebook, Instagram, and Google to attract customers actively looking for the latest smartphone offers.",
   },
   {
-    title: "24/7 Support",
+    title: "24/7 Support & Data-Driven Insights",
     icon: "M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z",
-    desc: "Dedicated team for continuous assistance and optimization",
+    desc: "Benefit from continuous monitoring, real-time reporting, and expert support to keep your campaigns performing at their best",
   },
 ];
 
 const BenefitSectionData = {
-  title: "Why Preschool Owners Choose Us",
-  description: "Discover how we help preschools thrive in the digital age",
+  title: "What You Get with Our Cell Phone Retail Marketing Services",
+  description:
+    "Our comprehensive suite of digital marketing solutions is designed specifically for cell phone retail stores",
   benefits: benefits,
 };
 
@@ -145,7 +147,7 @@ const services = [
   {
     title: "Social Media Ads",
     icon: "M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z",
-    desc: "Targeted campaigns that reach parents in your area",
+    desc: "Targeted campaigns that reach tech-savvy customers in your area",
     features: [
       "Facebook & Instagram Ads",
       "Custom Audience Targeting",
@@ -154,9 +156,9 @@ const services = [
     ],
   },
   {
-    title: "Parent SEO",
+    title: "Local SEO",
     icon: "M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9",
-    desc: "Dominate local search results for preschool queries",
+    desc: "Dominate local search results for cell phone retail queries",
     features: [
       "Local SEO Optimization",
       "Keyword Research",
@@ -167,20 +169,20 @@ const services = [
   {
     title: "Website Design",
     icon: "M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z",
-    desc: "Beautiful, conversion-focused preschool websites",
+    desc: "Beautiful, conversion-focused websites for cell phone retailers",
     features: [
       "Mobile Responsive",
-      "Virtual Tours",
-      "Online Registration",
-      "Parent Portal",
+      "E-Commerce Integration",
+      "Online Storefront",
+      "Customer Reviews",
     ],
   },
 ];
 
 const ServicesSectionData = {
-  title: "Our Play School Marketing Expertise",
+  title: "Technical Deep Dive",
   description:
-    "Comprehensive digital solutions designed specifically for preschools",
+    "Explore the cutting-edge technology and methodologies that power our cell phone retail marketing solutions",
   services: services,
 };
 
@@ -190,30 +192,31 @@ const ServicesSectionData = {
 const testimonials = [
   {
     id: 1,
-    school: "Little Stars Preschool",
+    school: "Gadget Galaxy",
     location: "San Francisco, CA",
     quote:
-      "Our enrollment increased by 45% within just two months of working with Cipher Leads. Their understanding of the preschool market is outstanding.",
+      "Our sales increased by 45% within just two months of working with Cipher Leads. Their expertise in mobile retail marketing is outstanding.",
   },
   {
     id: 2,
-    school: "Sunshine Learners",
+    school: "Tech Haven",
     location: "Chicago, IL",
     quote:
-      "The AI-driven approach to marketing has transformed how we connect with parents. Our waiting list is now longer than ever!",
+      "The AI-driven approach to marketing has transformed how we attract customers. Our foot traffic is higher than ever!",
   },
   {
     id: 3,
-    school: "Kids First Academy",
+    school: "Cellular Solutions",
     location: "Austin, TX",
     quote:
-      "The ROI we've seen from Cipher Leads' marketing strategies has been incredible. They truly understand what parents are looking for.",
+      "The ROI we've seen from Cipher Leads' strategies has been incredible. They truly understand what mobile customers are looking for.",
   },
 ];
 
 const SocialProofData = {
-  title: "Trusted by 50+ Preschools Nationwide",
-  description: "See what other preschool owners are saying about our services",
+  title: "Trusted by 100+ Cell Phone Retailers Nationwide",
+  description:
+    "See what other cell phone retail store owners are saying about our services",
   testimonials: testimonials,
 };
 
@@ -221,13 +224,13 @@ const SocialProofData = {
 
 // ------------------------------Results Section Data Start------------------------------
 const stats = [
-  { value: 200, label: "Leads in 30 Days" },
-  { value: 90, label: "Parent Engagement Rate" },
-  { value: 45, label: "Conversion Rate" },
+  { value: 500, label: "Leads in 30 Days" },
+  { value: 75, label: "Customer Engagement Rate" },
+  { value: 60, label: "Conversion Rate" },
 ];
 
 const ResultSectionData = {
-  title: "See What We've Achieved for Schools Like Yours",
+  title: "See What We've Achieved for Stores Like Yours",
   description: "Real results from our proven marketing strategies",
   stats: stats,
 };
@@ -253,12 +256,11 @@ const trustItems = [
 ];
 
 const CallToActionData = {
-  title: "Transform Your Preschool's Future Today",
+  title: "Transform Your Cell Phone Retail Business Today",
   description:
-    "Join 200+ schools who've doubled admissions with our proven system",
+    "Join 100+ cell phone retailers who have boosted sales and customer engagement with our proven marketing system",
   trustItems: trustItems,
 };
-
 // ------------------------------CTA Section Data End------------------------------
 
 export default function PreSchool() {
