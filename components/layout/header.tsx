@@ -14,7 +14,8 @@ export function Header() {
       name: "Services",
       href: "#",
       submenu: [
-        { name: "Advanced Lead Generation", href: "#" },
+        { name: "Agentic AI", href: "/services/ai" },
+        { name: "Advanced Lead Generation", href: "/services/lead-generation" },
         { name: "AI-Powered SEO", href: "/services/seo" },
         { name: "Social Media Management", href: "#" },
         { name: "Web Design & Development", href: "/services/web-design" },
