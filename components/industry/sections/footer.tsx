@@ -1,5 +1,12 @@
 import { motion } from "framer-motion";
-import { Facebook, Instagram, Mail, Phone } from "lucide-react";
+import {
+  Facebook,
+  Instagram,
+  Linkedin,
+  Mail,
+  Phone,
+  Youtube,
+} from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { FC, useEffect } from "react";
@@ -64,18 +71,36 @@ const Footer: FC = () => {
             </p> */}
             <div className="flex space-x-4">
               <a
-                href="#"
+                href="https://www.facebook.com/aicipherleads/"
                 className="text-neutral-400 hover:text-lime-400 transition-colors"
                 aria-label="Facebook"
+                target="_blank"
               >
                 <Facebook className="w-6 h-6" />
               </a>
               <a
-                href="#"
+                href="https://www.instagram.com/aicipher_leads"
                 className="text-neutral-400 hover:text-lime-400 transition-colors"
                 aria-label="Instagram"
+                target="_blank"
               >
                 <Instagram className="w-6 h-6" />
+              </a>
+              <a
+                href="https://www.linkedin.com/company/ai-cipher-leads"
+                className="text-neutral-400 hover:text-lime-400 transition-colors"
+                aria-label="Instagram"
+                target="_blank"
+              >
+                <Linkedin className="w-6 h-6" />
+              </a>
+              <a
+                href="https://www.youtube.com/@aicipherlead"
+                className="text-neutral-400 hover:text-lime-400 transition-colors"
+                aria-label="Instagram"
+                target="_blank"
+              >
+                <Youtube className="w-6 h-6" />
               </a>
             </div>
           </div>
@@ -84,7 +109,7 @@ const Footer: FC = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-3">
-              {["Home", "Services", "Results", "Contact"].map((link) => (
+              {["Home", "Contact"].map((link) => (
                 <li key={link}>
                   <a
                     href={`#${link.toLowerCase()}`}
