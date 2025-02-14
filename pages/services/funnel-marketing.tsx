@@ -229,10 +229,12 @@ const Seo = () => {
   return (
     <div>
       <Head>
-        <title>AI-Powered SEO Company in Indore | Ai Cipher Lead</title>
+        <title>
+          Best Marketing Funnel Agency in Indore | Convert Leads Into Sales
+        </title>
         <meta
           name="description"
-          content="Ai Cipher Lead is an AI-powered SEO company in Indore, making it a great choice for those looking for the best AI SEO services in Indore. Call Now!"
+          content="Ai Cipher Leads is the leading marketing funnel agency in Indore. Convert your website visitors into paying customers and build your brand like never before."
         />
       </Head>
       <Header />

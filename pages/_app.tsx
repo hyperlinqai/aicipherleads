@@ -19,6 +19,17 @@ export default function App({ Component, pageProps }: AppProps) {
         />
       </Head>
       <>
+        <script type="application/ld+json">
+          {`
+       "@context": "http://www.schema.org",
+       "@type": "WebSite",
+       "name": "Ai Cipher Leads",
+       "alternateName": "AI-Powered Digital Marketing Agency",
+       "url": "https://aicipherleads.com/"
+   `}
+        </script>
+        <script type="application/ld+json" />
+
         {/* <!-- Google tag (gtag.js) --> */}
         <script
           async

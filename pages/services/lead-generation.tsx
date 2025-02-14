@@ -231,10 +231,13 @@ const Seo = () => {
   return (
     <div>
       <Head>
-        <title>AI-Powered SEO Company in Indore | Ai Cipher Lead</title>
+        <title>
+          AI-Powered Lead Generation with Ai Cipher Leads | Lead Generation
+          Agency
+        </title>
         <meta
           name="description"
-          content="Ai Cipher Lead is an AI-powered SEO company in Indore, making it a great choice for those looking for the best AI SEO services in Indore. Call Now!"
+          content="Transform your sales strategy with  Ai Cipher Leads' AI-powered lead generation Agency in Indore. Discover targeted leads effortlessly and boost your sales today!"
         />
       </Head>
       <Header />

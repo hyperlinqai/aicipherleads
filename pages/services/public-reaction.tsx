@@ -231,10 +231,12 @@ const Seo = () => {
   return (
     <div>
       <Head>
-        <title>AI-Powered SEO Company in Indore | Ai Cipher Lead</title>
+        <title>
+          Public Relations Company in Indore | PR Agency | Ai Cipher Leads
+        </title>
         <meta
           name="description"
-          content="Ai Cipher Lead is an AI-powered SEO company in Indore, making it a great choice for those looking for the best AI SEO services in Indore. Call Now!"
+          content="Ai Cipher Leads is the best PR agency in Indore. We providing top-notch PR services to help businesses and individuals establish their brand, increase their visibility. Contact us now!"
         />
       </Head>
       <Header />
