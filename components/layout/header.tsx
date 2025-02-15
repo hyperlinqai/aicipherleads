@@ -22,7 +22,7 @@ export function Header() {
         { name: "Funnel Marketing", href: "/services/funnel-marketing" },
         {
           name: "Online Reputation Management",
-          href: "/services/online-reputation-management",
+          href: "/services/public-reaction",
         },
       ],
     },

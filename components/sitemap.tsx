@@ -1,8 +1,19 @@
 import { motion } from "framer-motion";
 import { Activity, ArrowRight, Clock, Globe, RefreshCw } from "lucide-react";
 import Head from "next/head";
+import { useEffect, useState } from "react";
+
+interface SitemapEntry {
+  url: string;
+  lastmod: string;
+  changefreq: string;
+  priority: string;
+}
 
 const SitemapPage = () => {
+  const [pages, setPages] = useState<SitemapEntry[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -19,32 +30,21 @@ const SitemapPage = () => {
     visible: { y: 0, opacity: 1 },
   };
 
-  const pages = [
-    {
-      url: "https://aicipherleads.com",
-      lastmod: "2025-02-03T17:17:10.736Z",
-      changefreq: "daily",
-      priority: "0.7",
-    },
-    {
-      url: "https://aicipherleads.com/contact",
-      lastmod: "2025-02-03T17:17:11.021Z",
-      changefreq: "daily",
-      priority: "0.7",
-    },
-    {
-      url: "https://aicipherleads.com/industry/pre-school",
-      lastmod: "2025-02-03T17:17:11.021Z",
-      changefreq: "daily",
-      priority: "0.7",
-    },
-    {
-      url: "https://aicipherleads.com/services/seo",
-      lastmod: "2025-02-03T17:17:11.021Z",
-      changefreq: "daily",
-      priority: "0.7",
-    },
-  ];
+  useEffect(() => {
+    const fetchSitemap = async () => {
+      try {
+        const response = await fetch("/api/parse-sitemap");
+        const data = await response.json();
+        setPages(data);
+      } catch (error) {
+        console.error("Error fetching sitemap:", error);
+      } finally {
+        setIsLoading(false);
+      }
+    };
+
+    fetchSitemap();
+  }, []);
 
   const formatDate = (isoDate: string) => {
     const date = new Date(isoDate);
@@ -54,6 +54,14 @@ const SitemapPage = () => {
       day: "numeric",
     });
   };
+
+  if (isLoading) {
+    return (
+      <div className="min-h-screen bg-neutral-900 flex items-center justify-center">
+        <div className="text-lime-400 animate-pulse">Loading sitemap...</div>
+      </div>
+    );
+  }
 
   return (
     <>
