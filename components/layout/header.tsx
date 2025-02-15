@@ -36,7 +36,8 @@ export function Header() {
         { name: "Retail", href: "/industry/professional" },
       ],
     },
-    { id: 4, name: "Contact", href: "/contact" },
+    { id: 4, name: "About", href: "/about" },
+    { id: 5, name: "Contact", href: "/contact" },
   ];
 
   return (
