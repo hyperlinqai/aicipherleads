@@ -32,8 +32,8 @@ export function Header() {
       href: "#",
       submenu: [
         { name: "Education", href: "/industry/education" },
-        { name: "Professional Services", href: "/industry/retail" },
-        { name: "Retail", href: "/industry/professional" },
+        { name: "Professional Services", href: "/industry/professional" },
+        { name: "Retail", href: "/industry/retail" },
       ],
     },
     { id: 4, name: "About", href: "/about" },

@@ -1,6 +1,7 @@
 import { CheckCircle, Clock, Heart } from "lucide-react";
 import Head from "next/head";
 
+// import Script from "next/script";
 import CallToAction from "@/components/industry/sections/callToAction";
 import Footer from "@/components/industry/sections/footer";
 import { Header } from "@/components/layout/header";
@@ -60,6 +61,13 @@ export default function Home() {
         <CallToAction {...CallToActionData} />
         <Footer />
       </main>
+      {/* <Script
+        src="https://59e24cb3-acde-4ca7-b7be-c2be1ab3b08f-00-988i414di9tg.picard.replit.dev/chatbot-embed.js"
+        data-chatbot-id="1"
+        strategy="lazyOnload"
+      />
+
+      <script>{`window.CHATBOT_ID = "1";`}</script> */}
     </div>
   );
 }

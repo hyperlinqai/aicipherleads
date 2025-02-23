@@ -1,14 +1,5 @@
 import { AnimatePresence, motion } from "framer-motion";
-import {
-  CheckCircle,
-  Github,
-  Linkedin,
-  Mail,
-  MapPin,
-  Phone,
-  Send,
-  Twitter,
-} from "lucide-react";
+import { CheckCircle, Mail, MapPin, Phone, Send } from "lucide-react";
 import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 
@@ -229,8 +220,7 @@ const ContactPage = () => {
                   <h3 className="text-xl font-semibold text-white mb-2">
                     Email Us
                   </h3>
-                  <p className="text-gray-300">contact@example.com</p>
-                  <p className="text-gray-300">support@example.com</p>
+                  <p className="text-gray-300">info@aicipherleads.com</p>
                 </div>
               </div>
             </motion.div>
@@ -248,8 +238,8 @@ const ContactPage = () => {
                   <h3 className="text-xl font-semibold text-white mb-2">
                     Call Us
                   </h3>
-                  <p className="text-gray-300">+1 (555) 123-4567</p>
-                  <p className="text-gray-300">Mon-Fri: 9am - 5pm PST</p>
+                  <p className="text-gray-300">+91 9111381768</p>
+                  <p className="text-gray-300">Mon-Fri: 9am - 5pm IST</p>
                 </div>
               </div>
             </motion.div>
@@ -267,14 +257,18 @@ const ContactPage = () => {
                   <h3 className="text-xl font-semibold text-white mb-2">
                     Visit Us
                   </h3>
-                  <p className="text-gray-300">123 Digital Street</p>
-                  <p className="text-gray-300">San Francisco, CA 94107</p>
+                  <p className="text-gray-300">
+                    201, Princes Business Skypark, AB Rd, opp. Orbit Mall,
+                  </p>
+                  <p className="text-gray-300">
+                    Scheme No 54, Indore, Madhya Pradesh 452011
+                  </p>
                 </div>
               </div>
             </motion.div>
 
             {/* Social Links */}
-            <motion.div
+            {/* <motion.div
               className="flex gap-6 justify-center md:justify-start"
               variants={itemVariants}
             >
@@ -289,7 +283,7 @@ const ContactPage = () => {
                   <Icon className="w-6 h-6" />
                 </motion.a>
               ))}
-            </motion.div>
+            </motion.div> */}
           </motion.div>
         </div>
       </div>

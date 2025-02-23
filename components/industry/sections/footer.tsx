@@ -109,14 +109,17 @@ const Footer: FC = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-3">
-              {["Home", "Contact"].map((link) => (
-                <li key={link}>
-                  <a
-                    href={`#${link.toLowerCase()}`}
+              {[
+                { value: "Home", link: "/" },
+                { value: "Contact", link: "/contact" },
+              ].map((link) => (
+                <li key={link.value}>
+                  <Link
+                    href={link.link}
                     className="text-neutral-400 hover:text-lime-400 transition-colors"
                   >
-                    {link}
-                  </a>
+                    {link.value}
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -127,18 +130,30 @@ const Footer: FC = () => {
             <h3 className="text-lg font-semibold mb-4">Our Services</h3>
             <ul className="space-y-3">
               {[
-                "AI-Driven Marketing",
-                "Digital Marketing & Development",
-                "Content Creation",
-                "Social Media Management",
+                {
+                  value: "AI-Driven Marketing",
+                  link: "/services/ai-driven-marketing",
+                },
+                {
+                  value: "Digital Marketing & Development",
+                  link: "/services/digital-marketing",
+                },
+                {
+                  value: "Content Creation",
+                  link: "/services/content-creation",
+                },
+                {
+                  value: "Social Media Management",
+                  link: "/services/social-media-management",
+                },
               ].map((service) => (
-                <li key={service}>
-                  <a
-                    href="#"
+                <li key={service.value}>
+                  <Link
+                    href={service.link}
                     className="text-neutral-400 hover:text-lime-400 transition-colors"
                   >
-                    {service}
-                  </a>
+                    {service.value}
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -148,18 +163,23 @@ const Footer: FC = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4">Industries We Serve</h3>
             <ul className="space-y-3">
-              {["Education", "Retail", "Professional Services"].map(
-                (industry) => (
-                  <li key={industry}>
-                    <a
-                      href="#"
-                      className="text-neutral-400 hover:text-lime-400 transition-colors"
-                    >
-                      {industry}
-                    </a>
-                  </li>
-                )
-              )}
+              {[
+                { value: "Education", link: "/industry/education" },
+                { value: "Retail", link: "/industry/retail" },
+                {
+                  value: "Professional Services",
+                  link: "/industry/professional",
+                },
+              ].map((industry) => (
+                <li key={industry.value}>
+                  <Link
+                    href={industry.link}
+                    className="text-neutral-400 hover:text-lime-400 transition-colors"
+                  >
+                    {industry.value}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
         </motion.div>
