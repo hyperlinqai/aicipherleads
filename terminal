@@ -1,0 +1,5 @@
+# Set remote origin (if not already set)
+git remote add origin https://github.com/hyperlinqai/aicipherleads.git
+
+# Push and set upstream
+git push -u origin main
